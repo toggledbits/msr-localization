@@ -34,7 +34,7 @@ maintainer: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggl
 # your attribution will be shown on the "About" page (plain text only; no HTML).
 attribution: "US English langauge translation by Patrick Rigney (rigpapa on the Smart Home Community); offered under MIT License."
 # Your github user ID and repository name for this translation
-#github_repository: toggledbits/msr-en-us
+#github_repository: toggledbits/msr-localization
 
 # Number formatting
 decimal_sep: .
