@@ -1,0 +1,695 @@
+# This is a language translation/localization file for Reactor. For information
+# please go to https://reactor.toggledbits.com/docs/Localization/
+#
+# This file is not included under the Reactor EULA, and is licensed separately
+# under the MIT License:
+#
+# (C) 2021 Patrick Rigney (US English/reference file)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this file (the “Software”), to deal in the Software without restriction,
+# including without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to permit
+# persons to whom the Software is furnished to do so, subject to the following
+# conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
+---
+version: 21257
+locale: en-US
+description: US English
+author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
+maintainer: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
+
+# If you contribute your language file to Reactor to be included in builds, this is how
+# your attribution will be shown on the "About" page (plain text only; no HTML).
+attribution: "US English langauge translation by Patrick Rigney (rigpapa on the Smart Home Community); offered under MIT License."
+# Your github user ID and repository name for this translation
+#github_repository: toggledbits/msr-en-us
+
+# Number formatting
+decimal_sep: .
+thousands_sep: ','
+
+# Date formatting
+time_meridiem:
+  ante: am
+  post: pm
+short_weekdays:  # order MUST be Sun-Sat; do not change order
+  - Sun
+  - Mon
+  - Tue
+  - Wed
+  - Thu
+  - Fri
+  - Sat
+long_weekdays:  # order MUST be Sun-Sat; do not change order
+  - Sunday
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+short_months:
+  - Jan
+  - Feb
+  - Mar
+  - Apr
+  - May
+  - Jun
+  - Jul
+  - Aug
+  - Sep
+  - Oct
+  - Nov
+  - Dec
+long_months:
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
+weekday_modes:  # modes for the Weekday condition type, MUST be listed in order shown
+  - Every
+  - First
+  - Second
+  - Third
+  - Fourth
+  - Fifth
+  - Last
+
+# Translation strings
+# See https://reactor.toggledbits.com/docs/Localization/ for discussion of strings and formatting rules.
+strings:
+  # Main navigation titles and pages
+  '#nav_status': Status
+  '#nav_rulesets': Rule Sets
+  '#nav_reactions': Reactions
+  '#nav_expressions': Expressions
+  '#nav_entities': Entities
+  '#nav_scope': Scope
+  '#nav_tools': Tools
+  '#nav_dashboard': Dashboard
+  '#nav_docs': Manual
+  '#nav_bugs': Bug Tracker
+  '#nav_donate': Donate
+  '#nav_about': About
+  'Connected': 'Connected'
+  'DISCONNECTED!': 'DISCONNECTED!'
+  '#sysconf-error-time': >
+    The time on this system and on the Reactor host are significantly different.
+    This may be due to incorrect system configuration on either or both. Please
+    check the configuration of both systems. The host reports {0}; browser
+    reports {1}; difference {2:.3f} seconds.
+
+  # Status page
+  '#reaction-status-ended': 'ended'
+  '#reaction-status-ready': 'ready'
+  '#reaction-status-running': 'running'
+  '#reaction-status-delayed': 'delayed'
+  '#reaction-status-waiting': 'waiting'
+  '#reaction-status-suspended': 'suspended'
+  'Set Rules': 'Set Rules'  # card title
+  'Running Reactions': 'Running Reactions'  # card title
+  "There are no running reactions.": "There are no running reactions."
+  'Recently Changed Entities': 'Recently Changed Entities'  # card title
+  'Current Alerts': 'Current Alerts'  #card title
+  "There are no current alerts.": "There are no current alerts."
+  "; this alert has repeated {0:d} times.": "; this alert has repeated {0:d} times."  # count
+  'Dismiss Alert': 'Dismiss Alert'  # title text for dismiss button (hover)
+  'Clear All': 'Clear All'  # card menu item
+
+  # Rule Sets page
+  'Add a new rule set': 'Add a new rule set'  # tooltip
+  '#ruleset-control-rename': 'Click to rename this rule set'  # tooltip (hover over Rule Set name)
+  '#ruleset-control-alphasort': 'Sort rules alphabetically'  # tooltip
+  '#ruleset-control-delete': 'Delete this rule set'  # tooltip
+  '#ruleset-button-newrule': 'Create Rule'  # button text
+  '#ruleset-delete-unable': 'Unable to Delete Rule Set'  # error dialog title
+  '#ruleset-delete-message': "You cannot delete the last rule set; there must be at least one."  # error dialog message
+  # Rename Rule modal dialog
+  '#rule-rename-title': 'Rename Rule'  # dialog title
+  '#rule-rename-button-cancel': 'Cancel'  # button label
+  '#rule-rename-button-rename': 'Rename'  # button label
+  # Copy/Move Rule modal dialog
+  '#rule-move-title': 'Copy/Move Rule'  # dialog title
+  '#rule-move-target-label': 'Destination Rule Set:'  # field label (for menu)
+  '#rule-move-button-move': 'Move Rule'  # button label
+  '#rule-move-button-copy': 'Copy Rule'  # button label
+  '#rule-move-button-cancel': 'Cancel'  # button label
+  '(to current rule set)': '(to current rule set)'  # target default value (copy)
+  # Delete Rule modal dialog
+  '#rule-delete-title': 'Delete Rule'  # dialog title
+  '#rule-delete-prompt': 'Really delete {0:q}? If other rules depend on it, they will not function correctly.'
+  '#rule-delete-button-delete': 'Delete'  # button label
+  '#rule-delete-button-cancel': 'Cancel'  # button label
+  '#rule-delete-error': 'An error occurred while deleting the rule.'
+  # Rename Rule Set model dialog
+  '#ruleset-rename-title': 'Rename Rule Set'
+  '#ruleset-rename-button-rename': 'Rename'
+  '#ruleset-rename-button-cancel': 'Cancel'
+  # Tooltips for rule row action buttons
+  '#rule-control-enable': 'Toggle Enabled'  # tooltip
+  '#rule-control-edit': 'Edit Rule'  # tooltip
+  '#rule-control-reset': 'Reset Rule'  # tooltip
+  '#rule-control-sort': 'Sort (click and drag)'  # tooltip
+  '#rule-control-delete': 'Delete Rule'  # tooltip
+  'This rule set is empty. Click "Add Rule" to add a rule to it.': 'This rule set is empty. Click "Add Rule" to add a rule to it.'
+
+  # Reactions page
+  '#reactions-page-title': 'Global Reactions'
+  'This Reaction is empty': 'This Reaction is empty'
+  'Reaction ID: {0}': 'Reaction ID: {0}'
+  '#reactions-button-create': 'Create Reaction'
+  # Tool tips for Reaction actions
+  '#reaction-action-run': 'Run Now'  # tooltip
+  '#reaction-action-edit': 'Edit this Reaction'  # tooltip
+  '#reaction-action-copy': 'Copy Reaction'  # tooltip
+  '#reaction-action-delete': 'Delete this Reaction'  # tooltip
+  # Delete Reaction modal dialog
+  '#reaction-delete-title': 'Confirm Deletion'
+  '#reaction-delete-prompt': 'Really delete {0:q}? There is no "undo"'
+  '#reaction-delete-button-delete': 'Delete'
+  '#reaction-delete-button-cancel': 'Cancel'
+
+  # Expressions page
+  'Global Expressions': 'Global Expressions'
+  'Save Changes': 'Save Changes'  # button label
+  'Revert': 'Revert'  # button label
+
+  # Entities page
+  'Click for predefined values': 'Click for predefined values'
+  '(not specified)': '(not specified)'  # dropdown field in action dialog, no value to be sent
+  'Ready to perform {0:q} on {1} ({2})?': 'Ready to perform {0:q} on {1} ({2})?'  # action dialog prompt: action, entity, entity ID
+  '#entity-action-cancel': 'Cancel'
+  '#entity-action-perform': 'Perform Now'
+  'Click to perform this action': 'Click to perform this action'
+  'Capabilities: {0}': 'Capabilities: {0}'  # list of capabilities in entity detail card
+  'Actions: ': 'Actions: '
+  '#entities-never-updated': 'never'  # shown when last update for entity is null
+  '#entities-col-name': 'Entity Name'  # column heading
+  '#entities-col-id': 'Canonical ID'  # column heading
+  '#entities-col-value': 'Primary Value'  # column heading
+  '#entities-col-modified': 'Last Modified'  # column heading
+
+  # Scope page
+  '(choose attribute)': '(choose attribute)'
+  '(choose target)': '(choose target)'
+  'Add Trace': 'Add Trace'  # button text
+  'Clear Traces': 'Clear Traces'  # button text
+
+  # Tools page
+  'Restart Reactor': 'Restart Reactor'  # Restart button
+
+  # Alert Watcher (top bar)
+  'No alerts.': 'No alerts.'
+  '{0:d} alerts; see Status.': '{0:d} alerts; see Status.'  # number of alerts
+
+  # Entity Picker (modal dialog)
+  'Choose Entity': 'Choose Entity'  # dialog title
+  'Name Contains:': 'Name Contains:'
+  'Filters:': 'Filters:'
+  '#ep-filter-clear': 'Clear Filters'  # clear button (clears filters)
+  '(any controller)': '(any controller)'
+  '(any group)': '(any group)'
+  '(any capability)': '(any capability)'
+
+  # Rule Editor
+  '#ruleedit-triggers-title': 'Triggers'
+  '#ruleedit-constraints-title': 'Constraints'
+  '#ruleedit-setreaction-title': 'Set Reaction'
+  '#ruleedit-resetreaction-title': 'Reset Reaction'
+  '#ruleedit-expressions-title': 'Local Expressions'
+  '#rule-state-null': '(none)'  # condition state: no state
+  '#rule-state-true': 'SET'  # condition state: set (true)
+  '#rule-state-false': 'reset'  # condition state: reset (false)
+  '#cond-status-repeats': '(last {0} span {1:.1f} seconds)'  # condition status: repeat count, time span
+  '#cond-status-pulsed': >  # condition status: pulse count, limit
+    (pulsed {0:d?<1000}{0:"&gt;999"?>=1000}{1:" of max "?>0}{1:d?>0} times)
+  '#cond-status-latched': '(latched)'  # condition status
+  '#cond-status-waiting-time': 'waiting for {0}'  # condition status: time
+  '#cond-status-sustained': 'sustained'  # condition status
+  '#cond-status-resetdelay': 'reset delay'  # condition status
+  '#cond-status-pulsebreak': 'break'  # condition status
+  '#cond-status-pulsing': 'pulse'  # condition status
+  '#cond-comment': 'Comment'  # condition type
+  '#cond-group': 'Group'  # condition type
+  '#cond-entity': 'Entity Attribute'  # condition type
+  '#cond-var': 'Variable Value'  # condition type
+  '#cond-rule': 'Rule State'  # condition type
+  '#cond-weekday': 'Week Day'  # condition type
+  '#cond-trange': 'Date/Time'  # condition type
+  '#cond-sun': 'Sunrise/Sunset'  # condition type
+  '#cond-interval': 'Interval'  # condition type
+  '#cond-startup': 'System Startup'  # condition type
+  '#cond-op-bet': 'between'  # condition op
+  '#cond-op-nob': 'not between'  # condition op
+  '#cond-op-before': 'before'  # condition op
+  '#cond-op-after': 'after'  # condition op
+  '#cond-op-starts': 'starts with'  # condition op
+  '#cond-op-notstarts': 'does not start with'  # condition op
+  '#cond-op-ends': 'ends with'  # condition op
+  '#cond-op-notends': 'does not end with'  # condition op
+  '#cond-op-contains': 'contains'  # condition op
+  '#cond-op-notcontains': 'does not contain'  # condition op
+  '#cond-op-in': 'in'  # condition op
+  '#cond-op-notin': 'not in'  # condition op
+  '#cond-op-istrue': 'is TRUE'  # condition op
+  '#cond-op-isfalse': 'is FALSE'  # condition op
+  '#cond-op-isnull': 'is NULL'  # condition op
+  '#cond-op-isval': 'is not NULL'  # condition op
+  '#cond-op-change': 'changes'  # condition op
+  'Must be numeric.': 'Must be numeric.'  # error text
+  'Must be integer.': 'Must be integer.'  # error text
+  'Must be integer > 0': 'Must be integer > 0'  # error text
+  'Must be integer >= 0': 'Must be numeric >= 0.'  # error text
+  'Must be integer > 1': 'Must be integer > 1'  # error text
+  'Must be integer 0-23': 'Must be integer 0-23'  # error text, hours validation
+  'Must be integer 0-59': 'Must be integer 0-59'  # error text, minutes validation
+  'Invalid boolean value.': 'Invalid boolean value.'  # error text
+  'Must be in numeric range 1970-2199': 'Must be in numeric range 1970-2199'  # error text, year validation
+  'Invalid year; range 2018 - 2100': 'Invalid year; range 2018 - 2100'  # error text, year validation
+  'Invalid year.': 'Invalid year.'  # error text
+  'Invalid entity': 'Invalid entity'  # error text
+  'Substitution not permitted here.': 'Substitution not permitted here.'  # error text
+  'Please select a condition; if none listed, none are eligible and you cannot use this mode.': >
+    Please select a condition; if none listed, none are eligible and you cannot use this mode.
+  "Can't find referenced entity!": "Can't find referenced entity!"
+  'This attribute is not present in the entity.': 'This attribute is not present in the entity.'
+  'Current value: {0}': 'Current value: {0}'  # value or '(not set)'
+  '(not set)': '(not set)'  # no current value
+  'The string is blank/empty.': 'The string is blank/empty.'
+  'This expression has not been evaluated or no longer exists.': 'This expression has not been evaluated or no longer exists.'
+  '{0} (missing entity) {1}': '{0} (missing entity) {1}'  # entity unknown, entity ID, attribute name
+  '(missing rule {0:q}) {1}': '(missing rule {0:q}) {1}'  # rule unknown, rule ID, variable name
+  '(global expression) {0}': '(global expression) {0}'  # global, variable name
+  '(case-sensitive)': '(case-sensitive)'  # case-sensitive test condition
+  '{0} (missing rule)': '{0} (missing rule)'  # rule condition, missing rule ID
+  # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
+  '#sun-desc-after': 'after {1:D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
+  '#sun-desc-before': 'before {1:D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
+  '#sun-desc-bet': >
+    between {1:#d?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T} and
+    {3:#d?!=0}{3:" minutes"?!=0}{3:" before"?<0}{3:" after"?>0"} {2:T}
+  '#sun-desc-nob': >
+    between {1:#d?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T} and
+    {3:#d?!=0}{3:" minutes"?!=0}{3:" before"?<0}{3:" after"?>0"} {2:T}
+  '#weekday-desc-': 'each week on {0}'  # weekdays
+  '#weekday-desc-1': 'on the first {0} of each month'
+  '#weekday-desc-2': 'on the second {0} of each month'
+  '#weekday-desc-3': 'on the third {0} of each month'
+  '#weekday-desc-4': 'on the fourth {0} of each month'
+  '#weekday-desc-5': 'on the fifth {0} of each month'
+  '#weekday-desc-L': 'on the last {0} of each month'
+  '#trange-DMY': '{4}'  # year, month, day, month name abbreviated, default locale string
+  '#trange-DM': '{3}'  # month, day, month name abbreviated, default locale string
+  '#trange-D': 'day {0} each month'  # day
+  '#trange-at-date-time': '{0} at {1}'  # date (from trange-DMY/DM/D), time
+  '#trange-desc-after': 'after {0}'  # date/time or time
+  '#trange-desc-before': 'before {0}'  # date/time or time
+  '#trange-desc-bet': 'from {0} until {1}'  # start, end
+  '#trange-desc-nob': 'not between {0} and {1}'  # start, end
+  '#interval-desc': >  # days, hrs, mins
+    every {0:d?>0}{0:" day"?>0}{0:"s"?>1} {1:d?>0}{1:" hour"?>0}{1:"s"?>1} {2:d?>0}{2:" minute"?>0}{2:"s"?>1}
+  '#interval-condrel': '(relative to {0})'  # condition description or date/time
+  '#cond-nocase': 'Ignore&nbsp;case'  # checkbox label (note html non-breaking space)
+  '#condopt-seq': >  # time restriction (seconds), condition description, must still be true flag (boolean)
+    {0:"within "?>0}{0:d?>0}{0:" secs "?>0}after {1:q}{2:" (which is still TRUE)"?true}
+  '#condopt-repeat': 'repeats {0} times within {1} secs'
+  '#condopt-sustain': 'for {0:"less than "?:<}{0:"at least "?!:<}{1} secs'
+  '#condopt-hold': 'delay reset for {0} secs'
+  '#condopt-pulse': 'pulse for {0} secs{1:", repeat after "?>0}{1:d?>0}{1:" secs"?>0}{2:" up to "?>0}{2:d?>0}{2:" times"?>0}'
+  '#condopt-latch': 'latching'
+  'Local Rule Variables': 'Local Rule Variables'  # option group header
+  'Global Variables': 'Global Variables'  # option group header
+  'Output Control': 'Output Control'  # condition options control group title
+  '#condoutput-follow-label': 'Follow (default) - output remains true while condition matches'
+  '#condoutput-form-delayreset': 'delay reset {0} seconds (0=no delay)'
+  '#condoutput-pulse-label': 'Pulse - output goes true for'
+  '#condoutput-form-pulsetime': '{0} seconds'  # form field
+  '#condoutput-pulse-once': 'once'  # option text
+  '#condoutput-pulse-repeat': 'repeat'  # option text
+  '#condoutput-form-pulserepeat': 'after {0} seconds'  # form field
+  '#condoutput-form-pulselimit': 'up to {0} times (0/blank=no&nbsp;limit)'
+  '#condoutput-latch': 'Latch - output is held true until reset by sibling'
+  'Restrictions': 'Restrictions'  # condition options restrictions group title
+  '#condrestrict-seqmenu': 'Condition must occur after {0}'  # form field (condition menu)
+  '(any time/no sequence)': '(any time/no sequence)'  # sequence option menu default
+  '#condrestrict-seq-time': 'within {0} seconds (0 = no time limit)'  # form field
+  '#condrestrict-seq-mode': 'Predecessor must still be true for this restriction to be met'  # checkbox label
+  '#condrestrict-sustain': 'Condition must be sustained for {0}{1} seconds'  # menu, input field
+  '#condrestrict-sustain-atleast': 'at least'
+  '#condrestrict-sustain-lessthan': 'less than'
+  '#condrestrict-repeat': 'Condition must repeat {0} times within {1} seconds'  # input field, input field
+  'Weekend': 'Weekend'  # term for Saturday and Sunday
+  'Weekday': 'Weekday'  # term for Monday - Friday
+  '#condform-sunstart': '{0} offset {1} minutes'  # Sun condition start, time menu, offset input field
+  '#condform-sunend': 'and {0} offset {1} minutes'  # Sun condition end, time menu, offset input field
+  '#condform-trange-daily': '(every day)'  # Date/Time condition menu default
+  '#condform-trange-monthly': '(every month)'  # Date/Time condition menu default
+  '#condform-trange-year-tip': 'Year, or leave blank for every year'
+  '#condform-interval-when': 'every {0} days {1} hours {2} minutes'  # form fields days, hours, minutes
+  '#condform-interval-days-tip': 'Enter an integer >= 0; hours and minutes must be 0!'  # input field tip
+  '#condform-interval-hours-tip': 'Enter an integer >= 0'  # input field tip
+  '#condform-interval-mins-tip': 'Enter an integer >= 0'  # input field tip
+  '#condform-interval-rel': 'relative to {0}'  # base selector (menu)
+  '#condform-interval-relopt-time': 'Time'  # menu item
+  '#condform-interval-relopt-cond': 'Condition TRUE'  # menu item
+  'Enter new group name': 'Enter new group name'  # group rename
+  '#cond-collapsed-count': '({0:d} condition{0:"s"?!=1} collapsed)'
+  # Import Rule modal dialog
+  '#cond-import-title': 'Import Rule as Group'
+  '#cond-import-select-label': 'Select Rule to import:'  # dialog text
+  '#cond-import-select-trig': 'Triggers'  # dialog radio button
+  '#cond-import-select-cons': 'Constraints'  # dialog radio button
+  '#cond-import-button-import': 'Import Rule'
+  '#cond-import-button-cancel': 'Cancel'
+  # Group Export modal dialog
+  '#cond-export-title': 'Export Group to Rule'
+  '#cond-export-prompt': >
+    Really export this group to a rule? It will be replaced with a "Rule" condition referencing the new rule, to
+    preserve the logic.
+  '#cond-export-button-export': 'Export'
+  '#cond-export-button-cancel': 'Cancel'
+  # Delete Group modal dialog
+  '#cond-delgroup-title': 'Delete Group'
+  '#cond-delgroup-prompt': >
+    This group has conditions and/or sub-groups, which will all be deleted as well. Really delete this group?
+  '#cond-delgroup-button-delete': 'Delete'
+  '#cond-delgroup-button-cancel': 'Cancel'
+  # Delete Condition modal dialog
+  '#cond-delcond-title': 'Delete Condition'
+  '#cond-delcond-prompt': >
+    This condition is used in a sequence option in another condition. Click OK to delete it and disconnect the sequence,
+    or Cancel to leave everything unchanged.
+  '#cond-delcond-button-delete': 'OK'
+  '#cond-delcond-button-cancel': 'Cancel'
+  # Unsaved Changes modal dialog
+  '#ruleedit-unsaved-title': 'Rule Modified (Unsaved Changes)'
+  '#ruleedit-unsaved-prompt': 'You have unsaved changes to this rule. Really discard changes and exit?'
+  '#ruleedit-unsaved-button-discard': 'Discard Changes'
+  '#ruleedit-unsaved-button-cancel': 'Cancel'
+  # Condition group and row tools
+  'Click to change group name': 'Click to change group name'  # tooltip
+  'Show condition options': 'Show condition options'  # tooltip
+  'Hide condition options': 'Hide condition options'  # tooltip
+  'Move condition (drag)': 'Move condition (drag)'  # tooltip
+  'Move group (drag)': 'Move group (drag)'  # tooltip
+  'Delete condition': 'Delete condition'  # tooltip
+  'Delete group': 'Delete group'  # tooltip
+  '#cond-group-not-tip': 'Invert the result of the AND/OR/XOR'  # tooltip
+  '#cond-group-and-tip': 'AND means group is true only if all conditions/subgroups are true'  # tooltip
+  '#cond-group-or-tip': 'OR means group is true if any child condition/subgroup is true'  # tooltip
+  '#cond-group-xor-tip': 'XOR (exclusive or) means group is true if one and only one condition/subgroup is true'  # tooltip
+  '#cond-group-nul-tip': 'NUL means group does not affect logic state of parent group'  # tooltip
+  '#cond-group-disable-tip': "Disabled groups are ignored, as if they did not exist (conditions don't run)"  # tooltip
+  'Edit group name': 'Edit group name'  # tooltip
+  'Export to Rule': 'Export to Rule'  # tooltip
+  '#cond-button-addcond': 'Add Condition'
+  'Add condition to this group': 'Add condition to this group'  # tooltip
+  '#cond-button-addgroup': 'Add Group'
+  'Add subgroup to this group': 'Add subgroup to this group'  # tooltip
+  '#cond-button-importrule': 'Import Rule'
+  'Import Rule as group': 'Import Rule as group'  # tooltip
+  '#cond-button-not': ' NOT '
+  '#cond-button-and': ' AND '
+  '#cond-button-or': ' OR '
+  '#cond-button-xor': ' XOR '
+  '#cond-button-nul': ' NUL '
+  '#cond-button-disable': ' DISABLE '
+  '#cond-opchange-title': 'Operator Change'
+  '#cond-opchange-msg': >
+    Changing the operator on this condition will remove the non-default condition options currently
+    set. Proceed?
+
+  # Reaction Editor
+  '#reaction-comment': 'Comment'
+  '#reaction-entity': 'Entity Action'
+  '#reaction-delay': 'Delay'
+  '#reaction-run': 'Run Reaction'
+  '#reaction-stop': 'Stop Reaction'
+  '#reaction-setvar': 'Set Variable'
+  '#reaction-notify': 'Notify'
+  '#reaction-request': 'HTTP Request'
+  '#reaction-shell': 'Shell Command'
+  '#reaction-group': 'Group'
+  # Group buttons/controls
+  '#reaction-button-addaction': 'Add Action'  # button label
+  '#reaction-button-import': 'Copy From'  # button label
+  '#reaction-button-import-tip': 'Import another Reaction into this one'  # tooltip
+  # Action row buttons/controls
+  '#reaction-button-import-spec': 'Import selected reaction'  # tooltip
+  '#reaction-button-tryone': 'Try this action'  # tooltip
+  '#reaction-button-clone': 'Clone action'  # tooltip
+  '#reaction-button-drag': 'Drag to move/reorder'  # tooltip
+  '#reaction-button-remove': 'Remove action'  # tooltip
+  #
+  'Enter delay time in seconds, or MM:SS, or HH:MM:SS': 'Enter delay time in seconds, or MM:SS, or HH:MM:SS'
+  'from this point': 'from this point'
+  'from start of reaction': 'from start of reaction'
+  "Enter value to be assigned to this variable.": "Enter value to be assigned to this variable."  # tooltip
+  "Force re-evaluation of expressions and conditions": "Force re-evaluation of expressions and conditions"
+  "Message:": "Message:"  # field label, notify action
+  "Request URL:": "Request URL:"  # field label, HTTP Request action
+  "Ignore self-signed/invalid SSL certificates": "Ignore self-signed/invalid SSL certificates"  # checkbox label, HTTP Request action
+  'Request Headers:': 'Request Headers:'  # field label, HTTP Request action
+  'Request Body:': 'Request Body:'  # field label, HTTP Request action
+  'Capture response to:': 'Capture response to:'  # field label, HTTP Request action
+  (ignore/discard response)': (ignore/discard response)'  # menu option default
+  'Enter shell command to be executed.': 'Enter shell command to be executed.'  # tooltip, Shell Command action
+  'Capture output (stdout) to:': 'Capture output (stdout) to:'  # field label, Shell Command action
+  '(ignore/discard output)': '(ignore/discard output)'  # menu option default
+  'Ignore shell/command exit code': 'Ignore shell/command exit code'  # checkbox label, Shell Command action
+  # Rename Reaction modal dialog
+  '#reaction-rename-title': 'Rename Reaction'
+  '#reaction-rename-button-rename': 'Rename'
+  '#reaction-rename-button-cancel': 'Cancel'
+  # Unsaved Changes modal dialog
+  '#reactionedit-unsaved-title': 'Reaction Modified (Unsaved Changes)'
+  '#reactionedit-unsaved-prompt': 'You have unsaved changes to this reaction. Really discard changes and exit?'
+  '#reactionedit-unsaved-button-discard': 'Discard Changes'
+  '#reactionedit-unsaved-button-cancel': 'Cancel'
+  # Try Action error dialog
+  "Insufficient Context": "Insufficient Context"
+  "The single-action trial tool cannot be used when the action parameters contain variable/expression substitutions.": >
+    The single-action trial tool cannot be used when the action parameters contain variable/expression substitutions.
+  # Unrecognized Action error dialog
+  "Unsupported Action Type": "Unsupported Action Type"
+  "Action type {0:q} unrecognized.": >
+    Action type {0:q} unrecognized. This can occur when you downgrade from a later version of Reactor.
+    I will try to preserve this action, but you can't edit it.
+  # Other strings
+  'Change Reaction Name': 'Change Reaction Name'  # tooltip
+  'Run Reaction Now': 'Run Reaction Now'
+  '{0} - Set': '{0} - Set'  # Rule's set reaction: rule name or ID
+  '{0} - Reset': '{0} - Reset'  # Rule's reset reaction: rule name or ID
+  'Must be integer > 0, or MM:SS or HH:MM:SS': 'Must be integer > 0, or MM:SS or HH:MM:SS'
+  'Entity required': 'Entity required'
+  'Selection required.': 'Selection required.'
+  'Must be http:// or https:// or substitution': 'Must be http:// or https:// or substitution'
+  'Invalid format': 'Invalid format'
+  "Command contains illegal characters (line breaks)": "Command contains illegal characters (line breaks)"
+  '"Try" button cannot be used when substitutions are used in parameters': '"Try" button cannot be used when substitutions are used in parameters'
+  'Try this action': 'Try this action'
+  'Click for predefined values or enter your own': 'Click for predefined values or enter your own'
+  '(unspecified)': '(unspecified)'
+  'Group Constraints': 'Group Constraints'
+  'Note: this action allows in-line substitutions in all request fields using <tt>${{expr}}</tt> syntax.': >
+    Note: this action allows in-line substitutions in all request fields using <tt>${{expr}}</tt> syntax.
+
+  # Expression Editor
+  '#expr-status-no-data': '(no data)'  # status: no data
+  '#expr-status-not-set': '(has not been set)'  # status: not set
+  '#expr-status-not-eval': '(has not been evaluated)'  # status: no eval
+  '#expr-status-error': '(error) {0}'  # eval error status: message
+  'Add Expression': 'Add Expression'  # button label
+  'Copy/Move From...': 'Copy/Move From...'  # button label
+  'Enter a variable name and then TAB out of the field.': 'Enter a variable name and then TAB out of the field.'
+  '(empty string)': '(empty string)'  # value hint
+  'Use&nbsp;Name': 'Use&nbsp;Name'  # checkbox label
+  'Last value:': 'Last value:'  # text label
+  '(not available: {0})': '(not available: {0})'  # status: reason
+  '(not available)': '(not available)'  # status (generic)
+  # Action buttons/icons
+  'Try this expression': 'Try this expression'  # tooltip
+  'Helper: Insert entity attribute value function': 'Helper: Insert entity attribute value function'  # tooltip
+  'Change order (drag)': 'Change order (drag)'  # tooltip
+  'Delete this expression': 'Delete this expression'  # tooltip
+  'since {0}': 'since {0}'  # date/time state last changed
+
+  # Delete Expression modal dialog
+  '#expression-delete-title': 'Delete Expression'
+  '#expression-delete-prompt': 'Deleting {0:q} will break conditions, actions, or other expressions that use it, if any.'
+  '#expression-delete-button-delete': 'Delete'
+  '#expression-delete-button-cancel': 'Cancel'
+  # Name Conflict (import) modal dialog
+  'Name Conflict': 'Name Conflict'
+  '#expression-import-conflict-message': >
+    There is already a variable named {0}. Delete the variable first if you mean to overwrite it.
+  # Expression Copy/Move modal dialog
+  '#expression-copy-title': 'Copy or Move Expression?'
+  '#expression-copy-prompt': >
+    Do you want to just make a copy, or move the expression here? If you choose "Move", it will be deleted from {0}.
+  '#expression-copy-button-copy': 'Copy'
+  '#expression-copy-button-move': 'Move'
+  '#expression-copy-button-cancel': 'Cancel'
+
+  # Editor general strings
+  '#edit-button-save': 'Save'  # button label
+  '#edit-button-exit': 'Exit'  # button label
+  "You have unsaved changes!": "You have unsaved changes!"
+  "Fix errors before saving": "Fix errors before saving"  # tooltip
+  "No unsaved changes": "No unsaved changes"  # tooltip
+
+  # Engine - only strings that appear in the UI are translated (e.g. alerts, names, etc.).
+  # Log messages are not translated.
+  '#recovery-name': 'Recovered Rules'  # Name of recovery rule set
+  'The "test time" function is configured; Reactor is not operating in "real" time.': >
+    The "test time" function is configured; Reactor is not operating in "real" time.
+  'The engine has been disabled and is not running (rules are not being processed).': >
+    The engine has been disabled and is not running (rules are not being processed).
+  "An error occurred running performAction({0:q}, {1:q}, ...)": >  # 0=entity ID, 1=action name
+    An error occurred running performAction({0:q}, {1:q}, ...)
+  "performAction({0:q}, {1:q}, ...) failed because the specified entity could not be found.": >
+    performAction({0:q}, {1:q}, ...) failed because the specified entity could not be found.
+  "Unable to compile global expression {0:q}": "Unable to compile global expression {0:q}"  # 0=var name
+  "Unable to resolve global expression {0:q}": "Unable to resolve global expression {0:q}"  # 0=var name
+  "Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled": >
+    Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled
+  "Rule reaction {0:q} could not be executed because the parent rule ({1:q}) no longer exists.": >
+    Rule reaction {0:q} could not be executed because the parent rule ({1:q}) no longer exists.
+  "Global Reaction with ID {0:q} could not be executed because it no longer exists.": >
+    Global Reaction with ID {0:q} could not be executed because it no longer exists.
+  "Reaction task {0:q} failed due to an exception. Please see the log.": >
+    Reaction task {0:q} failed due to an exception. Please see the log.
+  "Reaction {0:q} ({1}) step {2} delay ignored because the delay target time has already passed.": >
+    Reaction {0:q} ({1}) step {2} delay ignored because the delay target time has already passed.
+  'from {0:s?!n}{0:"now"?} + {1} seconds': 'from {0:s?!n}{0:"now"?} + {1} seconds'  # 0=delay start point, 1=delay length
+  "Reaction {0:q} ({1}) step {2} Entity action failed because the entity {3:q} cannot be found.": >
+    Reaction {0:q} ({1}) step {2} Entity action failed because the entity {3:q} cannot be found.
+  "Reaction {0:q} ({1}) step {2} notification method {3} attempted but is not configured.": >
+    Reaction {0:q} ({1}) step {2} notification method {3} attempted but is not configured.
+  "Reaction {0:q} ({1}) step {2} notification method {3} could not be loaded/initialized due to an error.": >
+    Reaction {0:q} ({1}) step {2} notification method {3} could not be loaded/initialized due to an error.
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}": >
+    Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response": >
+    Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set server response to variable {3}": >
+    Reaction {0:q} ({1}) step {2} HTTP request can't set server response to variable {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response": >
+    Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response
+  "Reaction {0:q} ({1}) step {2} HTTP request failed": "Reaction {0:q} ({1}) step {2} HTTP request failed"
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}": >
+    Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}": >
+    Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}
+  "Reaction {0:q} ({1}) step {2} Set Variable action failed setting {3:q}": >
+    "Reaction {0:q} ({1}) step {2} Set Variable action failed setting {3:q}
+  "Reaction {0:q} ({1}) step {2} Shell action failed command {3:q} ({4})": >
+    Reaction {0:q} ({1}) step {2} Shell action failed command {3:q} ({4})
+  "Reaction {0:q} ({1}) step {2} Shell can't save output in variable {3:q}": >
+    Reaction {0:q} ({1}) step {2} Shell can't save output in variable {3:q}
+  "Reaction {0:q} ({1}) step {2} Shell actions have not been enabled. See the docs!": >
+    Reaction {0:q} ({1}) step {2} Shell actions have not been enabled. See the docs!
+  "Reaction {0:q} ({1}) step {2} contains an unknown action type": >
+    Reaction {0:q} ({1}) step {2} contains an unknown action type
+  "The expression {0:q} in a substitution in rule {1:q} ({2}) could not be evaluated": >
+    The expression {0:q} in a substitution in rule {1:q} ({2}) could not be evaluated
+  "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) could not be compiled": >
+    The expression {0:q} in variable {1:q} of rule {2:q} ({3}) could not be compiled
+  "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) could not be evaluated": >
+    The expression {0:q} in variable {1:q} of rule {2:q} ({3}) could not be evaluated
+  "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation": >
+    The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation
+  "Rule {0:q} failed evaluation due to an error. Please see the log file.": >
+    Rule {0:q} failed evaluation due to an error. Please see the log file.
+  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found": >
+    An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found
+  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
+    An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}
+  'An "Expression Value" condition in rule {0:q} references a local expxression {1:q} that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references a local expxression {1:q} that no longer exists.
+  'An "Expression Value" condition in rule {0:q} references an expxression {1:q} of rule {2:q} that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references an expxression {1:q} of rule {2:q} that no longer exists.
+  'An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.': >
+    An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.
+  "The global expression {0:q} ({1}) could not be evaluated": >  # 0=name 1=expression
+    The global expression {0:q} ({1}) could not be evaluated
+  'An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.
+  'A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.': >
+    A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.
+  'Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.': >
+    Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.
+  'Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type': >
+    Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type
+  "Invalid/unsupported condition type {0:q} in {1:q}": "Invalid/unsupported condition type {0:q} in {1:q}"  # 0=cond type, 1=cond ID
+  'Rule {0:q} could not start because of an error; please refer to the log file.': >
+    Rule {0:q} could not start because of an error; please refer to the log file.
+  "Rule {0:q}  does not exist": "Rule {0:q}  does not exist"  # 0=ruleID
+  "Global expression {0:q} not defined": "Global expression {0:q} not defined"  # 0=var name
+  "Global expression {0:q} is expression-driven and cannot be set": >  # 0=var name
+    Global expression {0:q} is expression-driven and cannot be set
+  'Controller {0:q} is off-line!': 'Controller {0:q} is off-line!'  # 0=controller ID
+
+  # General use strings
+  'Reactor': 'Reactor'
+  '#opt-choose': '--chooose--'  # general "pick something" default for menus/dropdowns
+  'false': 'false'  # binary false, common use
+  'true': 'true'    # binary true, common use
+  'OK': 'OK'        # dialog button text, proceed with operation
+  'Cancel': 'Cancel'  # dialog button text, don't do operation
+  'SET': 'SET'      # Reaction state: SET
+  'RESET': 'RESET'  # Reaction state: RESET
+  'Entities': 'Entities'
+  'sunrise': 'sunrise'
+  'sunset': 'sunset'
+  'civdawn': 'civil dawn'
+  'civdusk': 'civil dusk'
+  'nautdawn': 'nautical dawn'
+  'nautdusk': 'nautical dusk'
+  'astrodawn': 'astronomical dawn'
+  'astrodusk': 'astronomical dusk'
+  'solarnoon': 'solar noon'
+  'Expand group': 'Expand group'
+  'Collapse group': 'Collapse group'
+  'Global Reactions': 'Global Reactions'
+  'Rule Set: {0}': 'Rule Set: {0}'  # headings/titles: rule set name
+  'Rule: {0}': 'Rule: {0}'  # headings/titles: rule name or ID
+  'Group {0}': 'Group {0}'  # headings/titles: group name or ID
+  '{0} (global)': '{0} (global)'  # headings/titles: var/expr/reaction name
+  'Capability: {0}': 'Capability: {0}'  # option group heading in attributes selector
+  '{0} (no value)': '{0} (no value)'  # selected attribute missing, attribute name
+  '{0} (primary)': '{0} (primary)'  # select attribute is primary, attribute name
+  'blank=any value': 'blank=any value'  # input field placeholder
+  'Extended Attributes': 'Extended Attributes'  # option group heading in attributes selector
+  '(no eligible attributes)': '(no eligible attributes)'  # option entry when no attributes available
+  '#dialog-error-title': 'Error'
+  '#dialog-warning-title': 'Warning'
+  'The operation cannot be completed at this time.': 'The operation cannot be completed at this time.'
+  'The save failed; try again. {0}': 'The save failed; try again. {0}'  # exception
+  'Operation in Progress': 'Operation in Progress'
+  'Please complete the current operation before switching views': 'Please complete the current operation before switching views'
+  'Loading...': 'Loading...'
+  'Enabled; click to disable': 'Enabled; click to disable'
+  'Disabled; click to enable': 'Disabled; click to enable'
+  'Required value.': 'Required value.'  # error text
+  'Click to select entity': 'Click to select entity'  # entity picker
