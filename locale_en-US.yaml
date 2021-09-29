@@ -7,7 +7,7 @@
 # (C) 2021 Patrick Rigney (US English/reference file)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this file (the “Software”), to deal in the Software without restriction,
+# of this file (the "Software"), to deal in the Software without restriction,
 # including without limitation the rights to use, copy, modify, merge, publish,
 # distribute, sublicense, and/or sell copies of the Software, and to permit
 # persons to whom the Software is furnished to do so, subject to the following
@@ -16,7 +16,7 @@
 # The above copyright notice and this permission notice shall be included in all
 # copies or substantial portions of the Software.
 #
-# THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
 # FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 # COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21257
+version: 21269
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
@@ -127,6 +127,7 @@ strings:
   '#reaction-status-waiting': 'waiting'
   '#reaction-status-suspended': 'suspended'
   'Set Rules': 'Set Rules'  # card title
+  'There are no set rules at this moment.': 'There are no set rules at this moment.'
   'Running Reactions': 'Running Reactions'  # card title
   "There are no running reactions.": "There are no running reactions."
   'Recently Changed Entities': 'Recently Changed Entities'  # card title
@@ -169,6 +170,7 @@ strings:
   '#rule-control-enable': 'Toggle Enabled'  # tooltip
   '#rule-control-edit': 'Edit Rule'  # tooltip
   '#rule-control-reset': 'Reset Rule'  # tooltip
+  '#rule-control-copy': 'Copy/Move Rule'  # tooltip
   '#rule-control-sort': 'Sort (click and drag)'  # tooltip
   '#rule-control-delete': 'Delete Rule'  # tooltip
   'This rule set is empty. Click "Add Rule" to add a rule to it.': 'This rule set is empty. Click "Add Rule" to add a rule to it.'
@@ -472,7 +474,8 @@ strings:
   'Request Headers:': 'Request Headers:'  # field label, HTTP Request action
   'Request Body:': 'Request Body:'  # field label, HTTP Request action
   'Capture response to:': 'Capture response to:'  # field label, HTTP Request action
-  (ignore/discard response)': (ignore/discard response)'  # menu option default
+  '(ignore/discard response)': '(ignore/discard response)'  # menu option default, HTTP Request action
+  'Wait until request completes': 'Wait until request completes'  # checkbox label, HTTP Request action
   'Enter shell command to be executed.': 'Enter shell command to be executed.'  # tooltip, Shell Command action
   'Capture output (stdout) to:': 'Capture output (stdout) to:'  # field label, Shell Command action
   '(ignore/discard output)': '(ignore/discard output)'  # menu option default
@@ -513,6 +516,11 @@ strings:
   'Group Constraints': 'Group Constraints'
   'Note: this action allows in-line substitutions in all request fields using <tt>${{expr}}</tt> syntax.': >
     Note: this action allows in-line substitutions in all request fields using <tt>${{expr}}</tt> syntax.
+  '#deprecated-action-use': '(deprecated; use {0:q})'  # 0=replacement action
+  '#deprecated-action': '(deprecated with no replacement)'
+  '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule
+  '; save response to {0:q} (local)': '; save response to {0:q} (local)'  # 0=varname
+  '; save response to {0:q} (global)': '; save response to {0:q} (global)'  # 0=varname
 
   # Expression Editor
   '#expr-status-no-data': '(no data)'  # status: no data
@@ -529,6 +537,7 @@ strings:
   '(not available)': '(not available)'  # status (generic)
   # Action buttons/icons
   'Try this expression': 'Try this expression'  # tooltip
+  'Auto-evaluate on dependency changes': 'Auto-evaluate on dependency changes'  # tooltip
   'Helper: Insert entity attribute value function': 'Helper: Insert entity attribute value function'  # tooltip
   'Change order (drag)': 'Change order (drag)'  # tooltip
   'Delete this expression': 'Delete this expression'  # tooltip
