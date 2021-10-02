@@ -1,7 +1,7 @@
 # This is a language translation/localization file for Reactor. For information
 # please go to https://reactor.toggledbits.com/docs/Localization/
 #
-# This file is not included under the Reactor EULA, and is licensed separately
+# This file is NOT included under the Reactor EULA, and is licensed separately
 # under the MIT License:
 #
 # (C) 2021 Patrick Rigney (US English/reference file)
@@ -24,15 +24,22 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21269
+version: 21275  # update this to the Julian date (YYDDD) of your published translation
 locale: en-US
 description: US English
-author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
-maintainer: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
+author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
+maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
+
+# Translators: update ref_version to reflect the version of the US English file used to
+#              produce your translation. This will help you track changes needed to future
+#              versions. Update this value as you apply changes to keep parity with the
+#              US English reference file. Also, use the txtool.js application in the 
+#              Reactor install "tools" subdirectory to help you identify differences.
+ref_version: 21275
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
-attribution: "US English langauge translation by Patrick Rigney (rigpapa on the Smart Home Community); offered under MIT License."
+attribution: "US English langauge translation by Patrick Rigney (toggledbits on the Smart Home Community); offered under MIT License."
 # Your github user ID and repository name for this translation
 #github_repository: toggledbits/msr-localization
 
@@ -113,6 +120,8 @@ strings:
   '#nav_about': About
   'Connected': 'Connected'
   'DISCONNECTED!': 'DISCONNECTED!'
+  'Local (browser) time': 'Local (browser) time'  # tooltip, header
+  'Host time': 'Host time'  # tooltip, header
   '#sysconf-error-time': >
     The time on this system and on the Reactor host are significantly different.
     This may be due to incorrect system configuration on either or both. Please
@@ -470,12 +479,16 @@ strings:
   "Force re-evaluation of expressions and conditions": "Force re-evaluation of expressions and conditions"
   "Message:": "Message:"  # field label, notify action
   "Request URL:": "Request URL:"  # field label, HTTP Request action
-  "Ignore self-signed/invalid SSL certificates": "Ignore self-signed/invalid SSL certificates"  # checkbox label, HTTP Request action
+  "Ignore self-signed/invalid SSL certificates": >  # checkbox label, HTTP Request action
+    Ignore self-signed/invalid SSL certificates
   'Request Headers:': 'Request Headers:'  # field label, HTTP Request action
   'Request Body:': 'Request Body:'  # field label, HTTP Request action
   'Capture response to:': 'Capture response to:'  # field label, HTTP Request action
   '(ignore/discard response)': '(ignore/discard response)'  # menu option default, HTTP Request action
   'Wait until request completes': 'Wait until request completes'  # checkbox label, HTTP Request action
+  'Suppress alerts on HTTP errors': 'Suppress alerts on HTTP errors'  # checkbox label, HTTP Request action
+  '#http-req-subst-notice': >  # HTTP Request action, may contain HTML
+    Note: this action allows in-line substitutions in all text fields using <tt>${{expr}}</tt> syntax.
   'Enter shell command to be executed.': 'Enter shell command to be executed.'  # tooltip, Shell Command action
   'Capture output (stdout) to:': 'Capture output (stdout) to:'  # field label, Shell Command action
   '(ignore/discard output)': '(ignore/discard output)'  # menu option default
@@ -509,7 +522,8 @@ strings:
   'Must be http:// or https:// or substitution': 'Must be http:// or https:// or substitution'
   'Invalid format': 'Invalid format'
   "Command contains illegal characters (line breaks)": "Command contains illegal characters (line breaks)"
-  '"Try" button cannot be used when substitutions are used in parameters': '"Try" button cannot be used when substitutions are used in parameters'
+  '"Try" button cannot be used when substitutions are used in parameters': >
+    "Try" button cannot be used when substitutions are used in parameters
   'Try this action': 'Try this action'
   'Click for predefined values or enter your own': 'Click for predefined values or enter your own'
   '(unspecified)': '(unspecified)'
@@ -634,10 +648,10 @@ strings:
     An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found
   "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
     An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}
-  'An "Expression Value" condition in rule {0:q} references a local expxression {1:q} that no longer exists.': >
-    An "Expression Value" condition in rule {0:q} references a local expxression {1:q} that no longer exists.
-  'An "Expression Value" condition in rule {0:q} references an expxression {1:q} of rule {2:q} that no longer exists.': >
-    An "Expression Value" condition in rule {0:q} references an expxression {1:q} of rule {2:q} that no longer exists.
+  'An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.
+  'An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.
   'An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.': >
     An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.
   "The global expression {0:q} ({1}) could not be evaluated": >  # 0=name 1=expression
@@ -653,7 +667,7 @@ strings:
   "Invalid/unsupported condition type {0:q} in {1:q}": "Invalid/unsupported condition type {0:q} in {1:q}"  # 0=cond type, 1=cond ID
   'Rule {0:q} could not start because of an error; please refer to the log file.': >
     Rule {0:q} could not start because of an error; please refer to the log file.
-  "Rule {0:q}  does not exist": "Rule {0:q}  does not exist"  # 0=ruleID
+  "Rule {0:q} does not exist": "Rule {0:q} does not exist"  # 0=ruleID
   "Global expression {0:q} not defined": "Global expression {0:q} not defined"  # 0=var name
   "Global expression {0:q} is expression-driven and cannot be set": >  # 0=var name
     Global expression {0:q} is expression-driven and cannot be set
