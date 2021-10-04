@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21275  # update this to the Julian date (YYDDD) of your published translation
+version: 21277  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -33,9 +33,9 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 # Translators: update ref_version to reflect the version of the US English file used to
 #              produce your translation. This will help you track changes needed to future
 #              versions. Update this value as you apply changes to keep parity with the
-#              US English reference file. Also, use the txtool.js application in the 
+#              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 21275
+ref_version: 21276
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -183,6 +183,9 @@ strings:
   '#rule-control-sort': 'Sort (click and drag)'  # tooltip
   '#rule-control-delete': 'Delete Rule'  # tooltip
   'This rule set is empty. Click "Add Rule" to add a rule to it.': 'This rule set is empty. Click "Add Rule" to add a rule to it.'
+  # Rule status detail card
+  '#group-status-no-data': '(no data)'
+  'Rule ID: {0}': 'Rule ID: {0}'  # 0=rule ID
 
   # Reactions page
   '#reactions-page-title': 'Global Reactions'
@@ -208,6 +211,7 @@ strings:
   # Entities page
   'Click for predefined values': 'Click for predefined values'
   '(not specified)': '(not specified)'  # dropdown field in action dialog, no value to be sent
+  'Perform {0}': 'Perform {0}'  # Dialog title
   'Ready to perform {0:q} on {1} ({2})?': 'Ready to perform {0:q} on {1} ({2})?'  # action dialog prompt: action, entity, entity ID
   '#entity-action-cancel': 'Cancel'
   '#entity-action-perform': 'Perform Now'
@@ -251,6 +255,8 @@ strings:
   '#rule-state-null': '(none)'  # condition state: no state
   '#rule-state-true': 'SET'  # condition state: set (true)
   '#rule-state-false': 'reset'  # condition state: reset (false)
+  '{0} -- {1} as of {2}': >  # condition state; 0=cond state, 1=eval state, 2=formatted date/time, 3=raw date/time
+    {0:=64s}{0:"..."?#>64} -- {1:T} as of {2}
   '#cond-status-repeats': '(last {0} span {1:.1f} seconds)'  # condition status: repeat count, time span
   '#cond-status-pulsed': >  # condition status: pulse count, limit
     (pulsed {0:d?<1000}{0:"&gt;999"?>=1000}{1:" of max "?>0}{1:d?>0} times)
@@ -304,8 +310,8 @@ strings:
     Please select a condition; if none listed, none are eligible and you cannot use this mode.
   "Can't find referenced entity!": "Can't find referenced entity!"
   'This attribute is not present in the entity.': 'This attribute is not present in the entity.'
-  'Current value: {0}': 'Current value: {0}'  # value or '(not set)'
-  '(not set)': '(not set)'  # no current value
+  'Current value: not set': 'Current value: not set'
+  'Current value: ({0}) {1}': 'Current value: ({0}) {1:=64s}{1:"..."?#>64}'
   'The string is blank/empty.': 'The string is blank/empty.'
   'This expression has not been evaluated or no longer exists.': 'This expression has not been evaluated or no longer exists.'
   '{0} (missing entity) {1}': '{0} (missing entity) {1}'  # entity unknown, entity ID, attribute name
@@ -340,6 +346,7 @@ strings:
   '#interval-desc': >  # days, hrs, mins
     every {0:d?>0}{0:" day"?>0}{0:"s"?>1} {1:d?>0}{1:" hour"?>0}{1:"s"?>1} {2:d?>0}{2:" minute"?>0}{2:"s"?>1}
   '#interval-condrel': '(relative to {0})'  # condition description or date/time
+  'yyyy': 'yyyy'  # year input field placeholder text
   '#cond-nocase': 'Ignore&nbsp;case'  # checkbox label (note html non-breaking space)
   '#condopt-seq': >  # time restriction (seconds), condition description, must still be true flag (boolean)
     {0:"within "?>0}{0:d?>0}{0:" secs "?>0}after {1:q}{2:" (which is still TRUE)"?true}
@@ -439,11 +446,14 @@ strings:
   'Add subgroup to this group': 'Add subgroup to this group'  # tooltip
   '#cond-button-importrule': 'Import Rule'
   'Import Rule as group': 'Import Rule as group'  # tooltip
-  '#cond-button-not': ' NOT '
-  '#cond-button-and': ' AND '
-  '#cond-button-or': ' OR '
-  '#cond-button-xor': ' XOR '
-  '#cond-button-nul': ' NUL '
+  'imported triggers': 'imported triggers'  # appended to group name on import
+  'imported constraints': 'imported constraints'  # appended to group name on import
+  '#cond-group-op-not': 'NOT'
+  '#cond-group-op-and': 'AND'
+  '#cond-group-op-or': 'OR'
+  '#cond-group-op-xor': 'XOR'
+  '#cond-group-op-nul': 'NUL'
+  '#cond-group-state-disabled': 'DISABLED'
   '#cond-button-disable': ' DISABLE '
   '#cond-opchange-title': 'Operator Change'
   '#cond-opchange-msg': >
@@ -547,6 +557,7 @@ strings:
   '(empty string)': '(empty string)'  # value hint
   'Use&nbsp;Name': 'Use&nbsp;Name'  # checkbox label
   'Last value:': 'Last value:'  # text label
+  '({0}) {1}': '({0}) {1}'  # value display; 0=localized type name, 1=value
   '(not available: {0})': '(not available: {0})'  # status: reason
   '(not available)': '(not available)'  # status (generic)
   # Action buttons/icons
@@ -555,7 +566,6 @@ strings:
   'Helper: Insert entity attribute value function': 'Helper: Insert entity attribute value function'  # tooltip
   'Change order (drag)': 'Change order (drag)'  # tooltip
   'Delete this expression': 'Delete this expression'  # tooltip
-  'since {0}': 'since {0}'  # date/time state last changed
 
   # Delete Expression modal dialog
   '#expression-delete-title': 'Delete Expression'
@@ -672,12 +682,23 @@ strings:
   "Global expression {0:q} is expression-driven and cannot be set": >  # 0=var name
     Global expression {0:q} is expression-driven and cannot be set
   'Controller {0:q} is off-line!': 'Controller {0:q} is off-line!'  # 0=controller ID
+  "Add your rule's triggers here": "Add your rule's triggers here"  # default comment in empty rule
+  "Add your actions here.": "Add your actions here."  # default comment in empty reaction
 
   # General use strings
   'Reactor': 'Reactor'
   '#opt-choose': '--chooose--'  # general "pick something" default for menus/dropdowns
+  '#data-type-string': 'string'
+  '#data-type-number': 'number'
+  '#data-type-boolean': 'boolean'
+  '#data-type-object': 'object'
+  '#data-type-array': 'array'
+  '#data-type-array-len': 'array:{0}'  # type with length, 0=array length
+  '#data-type-undefined': 'undefined'
+  '#data-type-null': 'null'
   'false': 'false'  # binary false, common use
   'true': 'true'    # binary true, common use
+  'null': 'null'    # null value, common use
   'OK': 'OK'        # dialog button text, proceed with operation
   'Cancel': 'Cancel'  # dialog button text, don't do operation
   'SET': 'SET'      # Reaction state: SET
@@ -702,9 +723,11 @@ strings:
   'Capability: {0}': 'Capability: {0}'  # option group heading in attributes selector
   '{0} (no value)': '{0} (no value)'  # selected attribute missing, attribute name
   '{0} (primary)': '{0} (primary)'  # select attribute is primary, attribute name
+  'since {0}': 'since {0}'  # condition state; 0=formatted date/time, 1=raw date/time
   'blank=any value': 'blank=any value'  # input field placeholder
   'Extended Attributes': 'Extended Attributes'  # option group heading in attributes selector
   '(no eligible attributes)': '(no eligible attributes)'  # option entry when no attributes available
+  '{0}? (missing)': '{0}? (missing)'  # missing attribute, entity, etc.; 0=item name
   '#dialog-error-title': 'Error'
   '#dialog-warning-title': 'Warning'
   'The operation cannot be completed at this time.': 'The operation cannot be completed at this time.'
