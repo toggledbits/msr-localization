@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21277  # Translators: update to YYDDD (Julian date) as you go.
+version: 21281  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 21276
+ref_version: 21281
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -245,6 +245,8 @@ strings:
   '(any controller)': '(any controller)'
   '(any group)': '(any group)'
   '(any capability)': '(any capability)'
+  '#ep-col-entity': 'Entity'  # column label
+  '#ep-col-id': 'ID'  # column label
 
   # Rule Editor
   '#ruleedit-triggers-title': 'Triggers'
@@ -293,6 +295,9 @@ strings:
   '#cond-op-isnull': 'is NULL'  # condition op
   '#cond-op-isval': 'is not NULL'  # condition op
   '#cond-op-change': 'changes'  # condition op
+  '#cond-desc-between': '{0} and {1}'  # condition operands for between/not between
+  '#cond-desc-changes': 'from {0} to {1}'  # condition operands for changes
+  '(any)': '(any)'  # change operand - any value
   'Must be numeric.': 'Must be numeric.'  # error text
   'Must be integer.': 'Must be integer.'  # error text
   'Must be integer > 0': 'Must be integer > 0'  # error text

@@ -2,6 +2,16 @@
 
 **NOTE: It is recommended that users translating from any base version of the US English file use the `ref_version` key to track the version of that file used to create/update their translation files.** That is, if you set `ref_version` to 21275, you will know in future that you made your translation up-to-date and in parity with US English version 21275, so future new versions can more easily focus on changes since that version. Also, check out the `txtool.js` file in the `tools` subdirectory of your Reactor install directory.
 
+## 21281
+
+New strings:
+
+* '#ep-col-entity': 'Entity'
+* '#ep-col-id': 'ID'
+* '#cond-desc-between': '{0} and {1}'  # condition description, between/not operands
+* '#cond-desc-changes': 'from {0} to {1}'  # condition description, changes terminal operands
+* '(any)'  # condition description, changes terminal operand default
+
 ## 21277
 
 New strings:
