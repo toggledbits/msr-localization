@@ -258,7 +258,7 @@ strings:
   '#rule-state-true': 'SET'  # condition state: set (true)
   '#rule-state-false': 'reset'  # condition state: reset (false)
   '{0} -- {1} as of {2}': >  # condition state; 0=cond state, 1=eval state, 2=formatted date/time, 3=raw date/time
-    {0:=64s}{0:"..."?#>64} -- {1:T} as of {2}
+    {0:=64s}{0:"..."?#>64} -- {1} as of {2}
   '#cond-status-repeats': '(last {0} span {1:.1f} seconds)'  # condition status: repeat count, time span
   '#cond-status-pulsed': >  # condition status: pulse count, limit
     (pulsed {0:d?<1000}{0:"&gt;999"?>=1000}{1:" of max "?>0}{1:d?>0} times)

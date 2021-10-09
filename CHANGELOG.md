@@ -12,6 +12,10 @@ New strings:
 * '#cond-desc-changes': 'from {0} to {1}'  # condition description, changes terminal operands
 * '(any)'  # condition description, changes terminal operand default
 
+Changes:
+
+* '{0} -- {1} as of {2}': The previous use of `{1:T}` should be changed to simply `{1}`, as the code now handles the boolean value itself and passes the translated value into this string (so no need to put it back through the translator as 1:T does).
+
 ## 21277
 
 New strings:
