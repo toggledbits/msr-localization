@@ -4,7 +4,7 @@
 # This file is NOT included under the Reactor EULA, and is licensed separately
 # under the MIT License:
 #
-# (C) 2021 Patrick Rigney (US English/reference file)
+# (C) 2021 Patrick Rigney (US English reference file)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this file (the "Software"), to deal in the Software without restriction,
@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21284  # Translators: update to YYDDD (Julian date) as you go.
+version: 21286  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,11 +35,14 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 21284
+ref_version: 21286
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
-attribution: "US English langauge translation by Patrick Rigney (toggledbits on the Smart Home Community); offered under MIT License."
+attribution: >
+  US English langauge translation by Patrick Rigney (toggledbits on the Smart Home Community);
+  offered under MIT License.
+
 # Your github user ID and repository name for this translation
 #github_repository: toggledbits/msr-localization
 
@@ -689,6 +692,12 @@ strings:
   'Controller {0:q} is off-line!': 'Controller {0:q} is off-line!'  # 0=controller ID
   "Add your rule's triggers here": "Add your rule's triggers here"  # default comment in empty rule
   "Add your actions here.": "Add your actions here."  # default comment in empty reaction
+  '#rule-update-rate': >
+    Rule {0:q} is being throttled because its update rate exceeds {1} updates per minute. Check for
+    logic errors that may be causing an evaluation loop, or devices that are "flapping".
+  '#rule-change-rate': >
+    Rule {0:q} is being throttled because it has changed state more than {1} times in the last
+    minute. Check for a "flapping" device or a loop in your logic.
 
   # General use strings
   'Reactor': 'Reactor'

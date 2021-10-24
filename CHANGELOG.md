@@ -2,6 +2,13 @@
 
 **NOTE: It is recommended that users translating from any base version of the US English file use the `ref_version` key to track the version of that file used to create/update their translation files.** That is, if you set `ref_version` to 21275, you will know in future that you made your translation up-to-date and in parity with US English version 21275, so future new versions can more easily focus on changes since that version. Also, check out the `txtool.js` file in the `tools` subdirectory of your Reactor install directory.
 
+## 21286
+
+New strings:
+
+* '#rule-update-rate': 'Rule {0:q} is being throttled because its update rate exceeds {1} updates per minute. Check for logic errors that may be causing an evaluation loop, or devices that are "flapping".'
+* '#rule-change-rate': 'Rule {0:q} is being throttled because it has changed state more than {1} times in the last minute. Check for a "flapping" device or a loop in your logic.'
+
 ## 21284
 
 New strings:
