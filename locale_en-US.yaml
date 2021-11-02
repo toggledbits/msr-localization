@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21286  # Translators: update to YYDDD (Julian date) as you go.
+version: 21305  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 21286
+ref_version: 21305
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -145,7 +145,8 @@ strings:
   'Recently Changed Entities': 'Recently Changed Entities'  # card title
   'Current Alerts': 'Current Alerts'  #card title
   "There are no current alerts.": "There are no current alerts."
-  "; this alert has repeated {0:d} times.": "; this alert has repeated {0:d} times."  # count
+  '#alert-time-last': 'Last {0}'  # Alert last occurrence; 0=formatted/locale short time, 1=raw timestamp
+  "; this alert has repeated {0:d} times.": "; this alert has repeated {0:d} times."  # 0=count
   'Dismiss Alert': 'Dismiss Alert'  # title text for dismiss button (hover)
   'Clear All': 'Clear All'  # card menu item
 
@@ -501,6 +502,9 @@ strings:
     Ignore self-signed/invalid SSL certificates
   'Request Headers:': 'Request Headers:'  # field label, HTTP Request action
   'Request Body:': 'Request Body:'  # field label, HTTP Request action
+  'HTTP Auth Type:': 'HTTP Auth Type:'  # field label, HTTP Request Action
+  'Username:': 'Username:'  # field label, HTTP Request Action
+  'Password:': 'Password:'  # field label, HTTP Request Action
   'Capture response to:': 'Capture response to:'  # field label, HTTP Request action
   '(ignore/discard response)': '(ignore/discard response)'  # menu option default, HTTP Request action
   'Wait until request completes': 'Wait until request completes'  # checkbox label, HTTP Request action
@@ -612,8 +616,8 @@ strings:
     performAction({0:q}, {1:q}, ...) failed because the specified entity could not be found.
   "Unable to compile global expression {0:q}": "Unable to compile global expression {0:q}"  # 0=var name
   "Unable to resolve global expression {0:q}": "Unable to resolve global expression {0:q}"  # 0=var name
-  "Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled": >
-    Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled
+  "#reaction-subst-failed-eval": >
+    Reaction {0:q} ({1}) step {2} substitution failed because the expression {3:q} could not be evaluated
   "Rule reaction {0:q} could not be executed because the parent rule ({1:q}) no longer exists.": >
     Rule reaction {0:q} could not be executed because the parent rule ({1:q}) no longer exists.
   "Global Reaction with ID {0:q} could not be executed because it no longer exists.": >
@@ -629,19 +633,9 @@ strings:
     Reaction {0:q} ({1}) step {2} notification method {3} attempted but is not configured.
   "Reaction {0:q} ({1}) step {2} notification method {3} could not be loaded/initialized due to an error.": >
     Reaction {0:q} ({1}) step {2} notification method {3} could not be loaded/initialized due to an error.
-  "Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}": >
-    Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}
-  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response": >
-    Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response
+  "Reaction {0:q} ({1}) step {2} HTTP request failed": "Reaction {0:q} ({1}) step {2} HTTP request failed"
   "Reaction {0:q} ({1}) step {2} HTTP request can't set server response to variable {3}": >
     Reaction {0:q} ({1}) step {2} HTTP request can't set server response to variable {3}
-  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response": >
-    Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response
-  "Reaction {0:q} ({1}) step {2} HTTP request failed": "Reaction {0:q} ({1}) step {2} HTTP request failed"
-  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}": >
-    Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}
-  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}": >
-    Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}
   "Reaction {0:q} ({1}) step {2} Set Variable action failed setting {3:q}": >
     "Reaction {0:q} ({1}) step {2} Set Variable action failed setting {3:q}
   "Reaction {0:q} ({1}) step {2} Shell action failed command {3:q} ({4})": >

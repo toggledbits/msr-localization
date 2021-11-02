@@ -2,6 +2,25 @@
 
 **NOTE: It is recommended that users translating from any base version of the US English file use the `ref_version` key to track the version of that file used to create/update their translation files.** That is, if you set `ref_version` to 21275, you will know in future that you made your translation up-to-date and in parity with US English version 21275, so future new versions can more easily focus on changes since that version. Also, check out the `txtool.js` file in the `tools` subdirectory of your Reactor install directory.
 
+## 21305
+
+New strings:
+
+* '#alert-time-last': 'Last {0}'
+* 'HTTP Auth Type:'
+* 'Username:'
+* 'Password:'
+* '#reaction-subst-failed-eval': 'Reaction {0:q} ({1}) step {2} substitution failed because the expression {3:q} could not be evaluated'
+
+Disused strings (do not remove -- see [docs](https://reactor.toggledbits.com/docs/Localization/#practices-and-guidelines-for-translators) for recommended handling):
+
+* 'Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled'
+* "Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}"
+* "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response"
+* "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response"
+* "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}"
+* "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}"
+
 ## 21286
 
 New strings:
