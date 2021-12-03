@@ -2,6 +2,17 @@
 
 **NOTE: It is recommended that users translating from any base version of the US English file use the `ref_version` key to track the version of that file used to create/update their translation files.** That is, if you set `ref_version` to 21275, you will know in future that you made your translation up-to-date and in parity with US English version 21275, so future new versions can more easily focus on changes since that version. Also, check out the `txtool.js` file in the `tools` subdirectory of your Reactor install directory.
 
+## 21332
+
+New strings:
+
+* '#cond-op-empty': 'is EMPTY'
+* '#cond-op-notempty': 'is not EMPTY'
+
+Modified Strings:
+
+* Please ensure that the string tagged '#sun-desc-nob' is for *NOT between (time) and (time).
+
 ## 21305
 
 New strings:

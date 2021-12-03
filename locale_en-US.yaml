@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21305  # Translators: update to YYDDD (Julian date) as you go.
+version: 21332  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 21305
+ref_version: 21332
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -299,6 +299,8 @@ strings:
   '#cond-op-isnull': 'is NULL'  # condition op
   '#cond-op-isval': 'is not NULL'  # condition op
   '#cond-op-change': 'changes'  # condition op
+  '#cond-op-empty': 'is EMPTY'  # condition op
+  '#cond-op-notempty': 'is not EMPTY'  # condition op
   '#cond-desc-between': '{0} and {1}'  # condition description, between/not operands
   '#cond-desc-changes': 'from {0} to {1}'  # condition description, changes terminal operands
   '(any)': '(any)'  # condition description, changes terminal operand default
@@ -335,7 +337,7 @@ strings:
     between {1:#d?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T} and
     {3:#d?!=0}{3:" minutes"?!=0}{3:" before"?<0}{3:" after"?>0"} {2:T}
   '#sun-desc-nob': >
-    between {1:#d?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T} and
+    not between {1:#d?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T} and
     {3:#d?!=0}{3:" minutes"?!=0}{3:" before"?<0}{3:" after"?>0"} {2:T}
   '#weekday-desc-': 'each week on {0}'  # weekdays
   '#weekday-desc-1': 'on the first {0} of each month'
