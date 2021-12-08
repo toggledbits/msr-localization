@@ -2,6 +2,39 @@
 
 **NOTE: It is recommended that users translating from any base version of the US English file use the `ref_version` key to track the version of that file used to create/update their translation files.** That is, if you set `ref_version` to 21275, you will know in future that you made your translation up-to-date and in parity with US English version 21275, so future new versions can more easily focus on changes since that version. Also, check out the `txtool.js` file in the `tools` subdirectory of your Reactor install directory.
 
+## 21340
+
+New Strings:
+
+* '#reaction-delay-for': 'for'
+* '; save response to {0:q} {1} ({2})'
+* '; capture output to {0:q} {1} ({2})'
+* '; capture output to {0:q} (local)'
+* '; capture output to {0:q} (global)'
+* '#action-desc-delay-inline': 'Delay for {0} seconds'
+* '#action-desc-delay-start': 'Delay for {0} seconds from start of reaction'
+* '#action-desc-comment': 'Comment: {0}'
+* '#action-desc-perform': 'Perform {0} on {1}{2:" with "?#>0}{2}'
+* '#action-desc-setvar-rule': 'Set Variable {0} in {1} to {2}{3:" and re-evaluate"?t}'
+* '#action-desc-setvar-global': 'Set Variable {0} to {1}{2:" and re-evaluate"?t}'
+* '#action-desc-run-global': 'Run global reaction {0} ({1})'
+* '#action-desc-run-rule': 'Run rule {0} ({1}) {2:"Set"?t}{2:"Reset"?f} reaction'
+* '#action-desc-stop-global': 'Stop global reaction {0} ({1})'
+* '#action-desc-stop-rule': 'Stop rule {0} ({1}) {2:"Set"?t}{2:"Reset"?f} reaction'
+* '#action-desc-notify': 'Notify via {0}: {1}'
+* '#action-desc-request': 'Request HTTP {0} {1:q}{2:"; wait for completion"?#t}'
+* '#action-desc-shell': 'Shell command: {0:q}{1:" (ignore exit code)"?t}'
+* '#action-desc-unrecognized': 'Unrecognized action type {0:q}? {1}'
+
+Modified Strings (these modifications are safe for all versions of Reactor current and prior):
+
+* '#sun-desc-after': 'after {1:#D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
+* '#sun-desc-before': 'before {1:#D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
+
+Retired Strings (do not delete from your data, just move them or mark them somehow)
+
+* '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule [RETIRED]
+
 ## 21332
 
 New strings:

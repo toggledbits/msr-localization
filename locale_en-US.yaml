@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21332  # Translators: update to YYDDD (Julian date) as you go.
+version: 21340  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 21332
+ref_version: 21340
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -331,8 +331,8 @@ strings:
   '(case-sensitive)': '(case-sensitive)'  # case-sensitive test condition
   '{0} (missing rule)': '{0} (missing rule)'  # rule condition, missing rule ID
   # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
-  '#sun-desc-after': 'after {1:D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
-  '#sun-desc-before': 'before {1:D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
+  '#sun-desc-after': 'after {1:#D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
+  '#sun-desc-before': 'before {1:#D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
   '#sun-desc-bet': >
     between {1:#d?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T} and
     {3:#d?!=0}{3:" minutes"?!=0}{3:" before"?<0}{3:" after"?>0"} {2:T}
@@ -493,9 +493,10 @@ strings:
   '#reaction-button-drag': 'Drag to move/reorder'  # tooltip
   '#reaction-button-remove': 'Remove action'  # tooltip
   #
+  '#reaction-delay-for': 'for'  # label, Delay action
   'Enter delay time in seconds, or MM:SS, or HH:MM:SS': 'Enter delay time in seconds, or MM:SS, or HH:MM:SS'
-  'from this point': 'from this point'
-  'from start of reaction': 'from start of reaction'
+  'from this point': 'from this point'  # menu option, Delay action
+  'from start of reaction': 'from start of reaction'  # menu option, Delay action
   "Enter value to be assigned to this variable.": "Enter value to be assigned to this variable."  # tooltip
   "Force re-evaluation of expressions and conditions": "Force re-evaluation of expressions and conditions"
   "Message:": "Message:"  # field label, notify action
@@ -556,9 +557,27 @@ strings:
     Note: this action allows in-line substitutions in all request fields using <tt>${{expr}}</tt> syntax.
   '#deprecated-action-use': '(deprecated; use {0:q})'  # 0=replacement action
   '#deprecated-action': '(deprecated with no replacement)'
-  '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule
+  '; save response to {0:q} {1} ({2})': '; save response to {0:q} {1} ({2})'  # 0=varname, 1=rule name, 2=rule ID
   '; save response to {0:q} (local)': '; save response to {0:q} (local)'  # 0=varname
-  '; save response to {0:q} (global)': '; save response to {0:q} (global)'  # 0=varname
+  '; save response to {0:q} (global)': '; save response to {0:q} (global)'  # 0=varname"
+  '; capture output to {0:q} {1} ({2})': '; capture output to {0:q} {1} ({2})'  # 0=varname, 1=rule name, 2=rule ID
+  '; capture output to {0:q} (local)': '; capture output to {0:q} (local)'  # 0=varname
+  '; capture output to {0:q} (global)': '; capture output to {0:q} (global)'  # 0=varname
+  # Action description text assemblies (detail panels in reaction list)
+  '#action-desc-delay-inline': 'Delay for {0} seconds'
+  '#action-desc-delay-start': 'Delay for {0} seconds from start of reaction'
+  '#action-desc-comment': 'Comment: {0}'
+  '#action-desc-perform': 'Perform {0} on {1}{2:" with "?#>0}{2}'
+  '#action-desc-setvar-rule': 'Set Variable {0} in {1} to {2}{3:" and re-evaluate"?t}'
+  '#action-desc-setvar-global': 'Set Variable {0} to {1}{2:" and re-evaluate"?t}'
+  '#action-desc-run-global': 'Run global reaction {0} ({1})'  # reaction name, id
+  '#action-desc-run-rule': 'Run rule {0} ({1}) {2:"Set"?t}{2:"Reset"?f} reaction'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-stop-global': 'Stop global reaction {0} ({1})'  # reaction name, id
+  '#action-desc-stop-rule': 'Stop rule {0} ({1}) {2:"Set"?t}{2:"Reset"?f} reaction'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-notify': 'Notify via {0}: {1}'  # method, parameters
+  '#action-desc-request': 'Request HTTP {0} {1:q}{2:"; wait for completion"?#t}'  # method, URL, true=wait
+  '#action-desc-shell': 'Shell command: {0:q}{1:" (ignore exit code)"?t}'  # command, true=ignore exit code
+  '#action-desc-unrecognized': 'Unrecognized action type {0:q}? {1}'  # action type, data
 
   # Expression Editor
   '#expr-status-no-data': '(no data)'  # status: no data
@@ -750,3 +769,6 @@ strings:
   'Required value.': 'Required value.'  # error text
   'Click to select entity': 'Click to select entity'  # entity picker
   'Link to documentation for topic': 'Link to documentation for topic'
+
+# retired strings; keep for compatibility with older versions of Reactor
+  '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule [RETIRED]
