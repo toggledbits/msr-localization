@@ -2,6 +2,43 @@
 
 **NOTE: It is recommended that users translating from any base version of the US English file use the `ref_version` key to track the version of that file used to create/update their translation files.** That is, if you set `ref_version` to 21275, you will know in future that you made your translation up-to-date and in parity with US English version 21275, so future new versions can more easily focus on changes since that version. Also, check out the `txtool.js` file in the `tools` subdirectory of your Reactor install directory.
 
+For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
+
+## 22124
+
+New Strings:
+
+* 'Rule History'
+* 'Reaction History'
+* 'Controller Status'
+* 'Click to add a new widget'
+* 'About Status Panel Widgets'
+* '#status-widget-info-text': 'This is the Status Panel. Each element of the Status Panel is a "widget" that you can customize. Drag a widget to move it. Resize a widget by grabbing the resize handle in its bottom right corner and dragging. Remove a widget by dragging it out of the Status Panel (over the left navigation area). Add a new widget by clicking the "Add Widget" widget (scroll down). You can change this widget to something else by choosing a new type below:'
+* 'Choose Widget:'
+* 'New Widget'
+* '#entity-rename-button-label': 'Rename'
+* '#entity-rename-title': 'Rename Entity'
+* '#entity-rename-input-label': 'New Name'
+* '#entity-rename-advice': 'Renaming an entity only renames it in Reactor, it does not change the name at the hub/source. If the source object supports renaming at the source, you may want to do it there.'
+* '#entity-rename-button-cancel': 'Cancel'
+* '#entity-rename-button-rename': 'Rename'
+* '#entity-delete-button-label': 'Delete'
+* '#entity-delete-title': 'Delete Entity'
+* '#entity-delete-button-cancel': 'Cancel'
+* '#entity-delete-button-delete': 'Delete'
+* '#entity-delete-body': 'Deleting an entity removes it from Reactor but does not remove it from the hub/source. If the source object still exists, the entity will be recreated next time the source is inventoried.'
+* '#entity-missing-alert': 'The entity is marked missing from the hub'
+* '#condrestrict-seq-conds': 'Eligible Conditions'
+* '#cond-button-clone': 'Clone condition'
+* '#grp-button-clone': 'Clone group'
+* '{0} (DEPRECATED)'
+* '#reaction-while': 'Repeat While...'
+* '#default-group-name': 'Group Constraints'
+* '#default-while-name': 'Repeat Conditions'
+* 'An Entity Attribute condition in {0:q} ({1}) failed because the referenced entity {2:q} could not be found'
+* 'Controller {0} device {1:q} ({2}) no longer exists.'
+* 'Discovered new device {0:q} ({1}) on controller {2:q}'
+
 ## 21340
 
 New Strings:

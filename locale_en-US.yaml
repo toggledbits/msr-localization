@@ -4,7 +4,7 @@
 # This file is NOT included under the Reactor EULA, and is licensed separately
 # under the MIT License:
 #
-# (C) 2021 Patrick Rigney (US English reference file)
+# (C) 2021-2022 Patrick Rigney (US English reference file)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this file (the "Software"), to deal in the Software without restriction,
@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21340  # Translators: update to YYDDD (Julian date) as you go.
+version: 22124  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 21340
+ref_version: 22124
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -138,17 +138,30 @@ strings:
   '#reaction-status-delayed': 'delayed'
   '#reaction-status-waiting': 'waiting'
   '#reaction-status-suspended': 'suspended'
-  'Set Rules': 'Set Rules'  # card title
+  'Set Rules': 'Set Rules'  # card title/widget name
   'There are no set rules at this moment.': 'There are no set rules at this moment.'
-  'Running Reactions': 'Running Reactions'  # card title
+  'Running Reactions': 'Running Reactions'  # card title/widget name
   "There are no running reactions.": "There are no running reactions."
-  'Recently Changed Entities': 'Recently Changed Entities'  # card title
-  'Current Alerts': 'Current Alerts'  #card title
+  'Recently Changed Entities': 'Recently Changed Entities'  # card title/widget name
+  'Current Alerts': 'Current Alerts'  # card title/widget name
   "There are no current alerts.": "There are no current alerts."
   '#alert-time-last': 'Last {0}'  # Alert last occurrence; 0=formatted/locale short time, 1=raw timestamp
   "; this alert has repeated {0:d} times.": "; this alert has repeated {0:d} times."  # 0=count
   'Dismiss Alert': 'Dismiss Alert'  # title text for dismiss button (hover)
   'Clear All': 'Clear All'  # card menu item
+  'Rule History': 'Rule History'  # card title/widget name
+  'Reaction History': 'Reaction History'  # card title/widget name
+  'Controller Status': 'Controller Status'  # card title/widget name
+  'Click to add a new widget': 'Click to add a new widget'  # hover tip
+  'About Status Panel Widgets': 'About Status Panel Widgets'  # card title/widget name
+  'New Widget': 'New Widget'
+  '#status-widget-info-text': >
+    This is the Status Panel. Each element of the Status Panel is a "widget" that you can customize.
+    Drag a widget to move it. Resize a widget by grabbing the resize handle in its bottom right
+    corner and dragging. Remove a widget by dragging it out of the Status Panel (over the left
+    navigation area). Add a new widget by clicking the "Add Widget" widget (scroll down). You can
+    change this widget to something else by choosing a new type below:
+  'Choose Widget:': 'Choose Widget:'  # selector label
 
   # Rule Sets page
   'Add a new rule set': 'Add a new rule set'  # tooltip
@@ -227,6 +240,22 @@ strings:
   '#entities-col-id': 'Canonical ID'  # column heading
   '#entities-col-value': 'Primary Value'  # column heading
   '#entities-col-modified': 'Last Modified'  # column heading
+  '#entity-rename-button-label': 'Rename'  # button label (entity detail)
+  '#entity-rename-title': 'Rename Entity'  # dialog title
+  '#entity-rename-input-label': 'New Name'  # field label
+  '#entity-rename-advice': >
+    Renaming an entity only renames it in Reactor, it does not change the name at the hub/source.
+    If the source object supports renaming at the source, you may want to do it there.
+  '#entity-rename-button-cancel': 'Cancel'  # button label (dialog)
+  '#entity-rename-button-rename': 'Rename'  # button label (dialog)
+  '#entity-delete-button-label': 'Delete'  # button label (entity detail)
+  '#entity-delete-title': 'Delete Entity'  # dialog title
+  '#entity-delete-button-cancel': 'Cancel'  # button label
+  '#entity-delete-button-delete': 'Delete'  # button label
+  '#entity-delete-body': >
+    Deleting an entity removes it from Reactor but does not remove it from the hub/source.
+    If the source object still exists, the entity will be recreated next time the source is inventoried.
+  '#entity-missing-alert': 'The entity is marked missing from the hub'
 
   # Scope page
   '(choose attribute)': '(choose attribute)'
@@ -379,6 +408,7 @@ strings:
   '#condoutput-form-pulselimit': 'up to {0} times (0/blank=no&nbsp;limit)'
   '#condoutput-latch': 'Latch - output is held true until reset by sibling'
   'Restrictions': 'Restrictions'  # condition options restrictions group title
+  '#condrestrict-seq-conds': 'Eligible Conditions'  # menu section titla (sequences)
   '#condrestrict-seqmenu': 'Condition must occur after {0}'  # form field (condition menu)
   '(any time/no sequence)': '(any time/no sequence)'  # sequence option menu default
   '#condrestrict-seq-time': 'within {0} seconds (0 = no time limit)'  # form field
@@ -440,6 +470,8 @@ strings:
   'Show condition options': 'Show condition options'  # tooltip
   'Hide condition options': 'Hide condition options'  # tooltip
   'Move condition (drag)': 'Move condition (drag)'  # tooltip
+  '#cond-button-clone': 'Clone condition'  # tooltip
+  '#grp-button-clone': 'Clone group'  # tooltip
   'Move group (drag)': 'Move group (drag)'  # tooltip
   'Delete condition': 'Delete condition'  # tooltip
   'Delete group': 'Delete group'  # tooltip
@@ -470,6 +502,7 @@ strings:
   '#cond-opchange-msg': >
     Changing the operator on this condition will remove the non-default condition options currently
     set. Proceed?
+  '{0} (DEPRECATED)': '{0} (DEPRECATED)'  # Entity attribute name menu, attribute now deprecated
 
   # Reaction Editor
   '#reaction-comment': 'Comment'
@@ -482,6 +515,7 @@ strings:
   '#reaction-request': 'HTTP Request'
   '#reaction-shell': 'Shell Command'
   '#reaction-group': 'Group'
+  '#reaction-while': 'Repeat While...'
   # Group buttons/controls
   '#reaction-button-addaction': 'Add Action'  # button label
   '#reaction-button-import': 'Copy From'  # button label
@@ -492,6 +526,9 @@ strings:
   '#reaction-button-clone': 'Clone action'  # tooltip
   '#reaction-button-drag': 'Drag to move/reorder'  # tooltip
   '#reaction-button-remove': 'Remove action'  # tooltip
+  #
+  '#default-group-name': 'Group Constraints'
+  '#default-while-name': 'Repeat Conditions'
   #
   '#reaction-delay-for': 'for'  # label, Delay action
   'Enter delay time in seconds, or MM:SS, or HH:MM:SS': 'Enter delay time in seconds, or MM:SS, or HH:MM:SS'
@@ -713,6 +750,8 @@ strings:
   '#rule-change-rate': >
     Rule {0:q} is being throttled because it has changed state more than {1} times in the last
     minute. Check for a "flapping" device or a loop in your logic.
+  'An Entity Attribute condition in {0:q} ({1}) failed because the referenced entity {2:q} could not be found': >
+    An Entity Attribute condition in {0:q} ({1}) failed because the referenced entity {2:q} could not be found
 
   # General use strings
   'Reactor': 'Reactor'
@@ -769,6 +808,8 @@ strings:
   'Required value.': 'Required value.'  # error text
   'Click to select entity': 'Click to select entity'  # entity picker
   'Link to documentation for topic': 'Link to documentation for topic'
+  'Controller {0} device {1:q} ({2}) no longer exists.': 'Controller {0} device {1:q} ({2}) no longer exists.'
+  'Discovered new device {0:q} ({1}) on controller {2:q}': 'Discovered new device {0} (#{1}) on controller {2:q}'
 
-# retired strings; keep for compatibility with older versions of Reactor
+  # Retired strings; keep for compatibility with older versions of Reactor
   '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule [RETIRED]
