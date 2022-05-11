@@ -4,6 +4,12 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 22131
+
+New Strings:
+
+* 'Controller ID: {0}'
+
 ## 22124
 
 New Strings:

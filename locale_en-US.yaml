@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22124  # Translators: update to YYDDD (Julian date) as you go.
+version: 22131  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 22124
+ref_version: 22131
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -162,6 +162,7 @@ strings:
     navigation area). Add a new widget by clicking the "Add Widget" widget (scroll down). You can
     change this widget to something else by choosing a new type below:
   'Choose Widget:': 'Choose Widget:'  # selector label
+  'Controller ID: {0}': 'Controller ID: {0}'  # tooltip for controller status entry
 
   # Rule Sets page
   'Add a new rule set': 'Add a new rule set'  # tooltip
