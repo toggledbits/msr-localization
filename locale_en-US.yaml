@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22131  # Translators: update to YYDDD (Julian date) as you go.
+version: 22140  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 22131
+ref_version: 22140
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -810,7 +810,7 @@ strings:
   'Click to select entity': 'Click to select entity'  # entity picker
   'Link to documentation for topic': 'Link to documentation for topic'
   'Controller {0} device {1:q} ({2}) no longer exists.': 'Controller {0} device {1:q} ({2}) no longer exists.'
-  'Discovered new device {0:q} ({1}) on controller {2:q}': 'Discovered new device {0} (#{1}) on controller {2:q}'
+  'Discovered new device {0:q} ({1}) on controller {2:q}': 'Discovered new device {0:q} ({1}) on controller {2:q}'
 
   # Retired strings; keep for compatibility with older versions of Reactor
   '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule [RETIRED]

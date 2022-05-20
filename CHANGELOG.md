@@ -4,6 +4,10 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 22140
+
+* Fixed the new entity discovery message entry ("Discovered new device {0:q} ({1}) on controller {2:q}") value to match the key. The key was the correct/desired string, but along the way it had been updated prior to release and the changes were not applied to the value. They now match.
+
 ## 22131
 
 New Strings:
