@@ -4,6 +4,18 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 22292
+
+* Changed string `#condopt-sustain` to `'#condopt-sustain': 'for {0:"less than "?:lt}{0:"at least "?!:lt}{1} secs` to fix incorrect text for sustained-for option with "less than" operator (specifically, the `<` character was changed to the correct `lt` string in both substitutions).
+
+New Strings:
+
+* 'minutes after'
+* 'minutes before'
+* 'Wait for completion'
+* '#action-desc-run-wait': ' (wait for it to finish)'
+* '#action-desc-run-continue': ' (do not wait for it to finish)'
+
 ## 22140
 
 * Fixed the new entity discovery message entry ("Discovered new device {0:q} ({1}) on controller {2:q}") value to match the key. The key was the correct/desired string, but along the way it had been updated prior to release and the changes were not applied to the value. They now match.

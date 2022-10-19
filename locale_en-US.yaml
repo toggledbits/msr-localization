@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22140  # Translators: update to YYDDD (Julian date) as you go.
+version: 22292  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 22140
+ref_version: 22292
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -360,6 +360,8 @@ strings:
   '(global expression) {0}': '(global expression) {0}'  # global, variable name
   '(case-sensitive)': '(case-sensitive)'  # case-sensitive test condition
   '{0} (missing rule)': '{0} (missing rule)'  # rule condition, missing rule ID
+  'minutes after': 'minutes after'  # sun condition menu
+  'minutes before': 'minutes before'  # sun condition menu
   # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
   '#sun-desc-after': 'after {1:#D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
   '#sun-desc-before': 'before {1:#D?!=0}{1:" minutes"?!=0}{1:" before"?<0}{1:" after"?>0"} {0:T}'
@@ -392,7 +394,7 @@ strings:
   '#condopt-seq': >  # time restriction (seconds), condition description, must still be true flag (boolean)
     {0:"within "?>0}{0:d?>0}{0:" secs "?>0}after {1:q}{2:" (which is still TRUE)"?true}
   '#condopt-repeat': 'repeats {0} times within {1} secs'
-  '#condopt-sustain': 'for {0:"less than "?:<}{0:"at least "?!:<}{1} secs'
+  '#condopt-sustain': 'for {0:"less than "?:lt}{0:"at least "?!:lt}{1} secs'
   '#condopt-hold': 'delay reset for {0} secs'
   '#condopt-pulse': 'pulse for {0} secs{1:", repeat after "?>0}{1:d?>0}{1:" secs"?>0}{2:" up to "?>0}{2:d?>0}{2:" times"?>0}'
   '#condopt-latch': 'latching'
@@ -536,6 +538,7 @@ strings:
   'from this point': 'from this point'  # menu option, Delay action
   'from start of reaction': 'from start of reaction'  # menu option, Delay action
   "Enter value to be assigned to this variable.": "Enter value to be assigned to this variable."  # tooltip
+  "Wait for completion": "Wait for completion"  # checkbox label (Run Reaction action)
   "Force re-evaluation of expressions and conditions": "Force re-evaluation of expressions and conditions"
   "Message:": "Message:"  # field label, notify action
   "Request URL:": "Request URL:"  # field label, HTTP Request action
@@ -610,6 +613,8 @@ strings:
   '#action-desc-setvar-global': 'Set Variable {0} to {1}{2:" and re-evaluate"?t}'
   '#action-desc-run-global': 'Run global reaction {0} ({1})'  # reaction name, id
   '#action-desc-run-rule': 'Run rule {0} ({1}) {2:"Set"?t}{2:"Reset"?f} reaction'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-run-wait': ' (wait for it to finish)'
+  '#action-desc-run-continue': ' (do not wait for it to finish)'
   '#action-desc-stop-global': 'Stop global reaction {0} ({1})'  # reaction name, id
   '#action-desc-stop-rule': 'Stop rule {0} ({1}) {2:"Set"?t}{2:"Reset"?f} reaction'  # rule name, ID, true=Set/false=Reset
   '#action-desc-notify': 'Notify via {0}: {1}'  # method, parameters
