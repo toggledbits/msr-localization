@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22292  # Translators: update to YYDDD (Julian date) as you go.
+version: 22306  # Translators: update to YYDDD (Julian date) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 22292
+ref_version: 22306
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -163,6 +163,7 @@ strings:
     change this widget to something else by choosing a new type below:
   'Choose Widget:': 'Choose Widget:'  # selector label
   'Controller ID: {0}': 'Controller ID: {0}'  # tooltip for controller status entry
+  'Stop this reaction/task': 'Stop this reaction/task'  # tooltip for Running Reactions stop button
 
   # Rule Sets page
   'Add a new rule set': 'Add a new rule set'  # tooltip
@@ -578,6 +579,7 @@ strings:
     Action type {0:q} unrecognized. This can occur when you downgrade from a later version of Reactor.
     I will try to preserve this action, but you can't edit it.
   # Other strings
+  'Enter comment text': 'Enter comment text'  # default text for comment
   'Change Reaction Name': 'Change Reaction Name'  # tooltip
   'Run Reaction Now': 'Run Reaction Now'
   '{0} - Set': '{0} - Set'  # Rule's set reaction: rule name or ID
@@ -816,6 +818,9 @@ strings:
   'Link to documentation for topic': 'Link to documentation for topic'
   'Controller {0} device {1:q} ({2}) no longer exists.': 'Controller {0} device {1:q} ({2}) no longer exists.'
   'Discovered new device {0:q} ({1}) on controller {2:q}': 'Discovered new device {0:q} ({1}) on controller {2:q}'
+  'Content hidden': 'Content hidden'  # tooltip for non-empty collapsed editors
+  '#reactor-update-available': 'A new version of Reactor is available ({0}-{1}). {2}'  # branch, version, message
+  '#reactor-update-message': 'Please upgrade to get the latest bug fixes and features.'
 
   # Retired strings; keep for compatibility with older versions of Reactor
   '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule [RETIRED]
