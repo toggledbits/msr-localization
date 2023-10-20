@@ -4,6 +4,42 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 23196
+
+* The "Number formatting" strings `decimal_sep` and `thousands_sep` are deprecated and will be removed from a future file. Localization of numbers is handled by Node/JS-native localization data (always has been).
+* The short and long weekday and month names are now only used if provided; if they are not provided (i.e. are not defined at all in the file, which is now recommended), the Node/JS-native localization data will be used for translation. They have been removed from the reference (en-US) file.
+
+New Strings:
+
+    '#action-form-warning'
+    '#cond-op-nottrue'
+    '#cond-op-notfalse'
+    '#opt-current-reaction'
+    '#action-desc-stop-current'
+    "The global expression {0:q} ({1}) could not be evaluated"
+    "An Entity Attribute condition in rule {0:q} ({1}) failed because the referenced entity {2} ({3}) does not have attribute {4}"
+    'An "Expression Value" condition in rule {0:q} ({1}) references an expression {2:q} of rule {3:q} ({4}) that no longer exists.'
+    'An "Expression Value" condition in rule {0:q} ({1}) references a local expression {2:q} that no longer exists.'
+    'An Expression Value condition in rule {0:q} ({1}) references rule {2:q}, which no longer exists.'
+    'An "Expression Value" condition in rule {0:q} ({1}) references global expression {2:q}, which no longer exists.'
+    'Rule {0:q} ({1}) failed because an Interval condition references a dependent condition that no longer exists.'
+    'Rule {0:q} ({1}) failed because it contains a condition of type {2:q}, which is not a recognized condition type'
+    'Rule {0:q} ({1}) could not start because of an error; please refer to the log file.'
+
+Modified Strings:
+    '#cond-group-disable-tip'
+
+Retired Strings:
+    "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found": >
+    "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
+    'An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.': >
+    'An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.': >
+    'An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.': >
+    'An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.': >
+    'Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.': >
+    'Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type': >
+    'Rule {0:q} could not start because of an error; please refer to the log file.': >
+
 ## 22306
 
 New Strings:

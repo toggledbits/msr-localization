@@ -4,7 +4,7 @@
 # This file is NOT included under the Reactor EULA, and is licensed separately
 # under the MIT License:
 #
-# (C) 2021-2022 Patrick Rigney (US English reference file)
+# (C) 2021-2023 Patrick Rigney (US English reference file)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this file (the "Software"), to deal in the Software without restriction,
@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22306  # Translators: update to YYDDD (Julian date) as you go.
+version: 23196  # Translators: update to YYDDD (Julian day) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 22306
+ref_version: 23196
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -46,56 +46,15 @@ attribution: >
 # Your github user ID and repository name for this translation
 #github_repository: toggledbits/msr-localization
 
-# Number formatting
+# Number formatting (these are not currently used)
 decimal_sep: .
 thousands_sep: ','
 
-# Date formatting
+# Date formatting extras. The weekday and month names are derived from the JavaScript locale, so
+# they do not need to be defined here.
 time_meridiem:
   ante: am
   post: pm
-short_weekdays:  # order MUST be Sun-Sat; do not change order
-  - Sun
-  - Mon
-  - Tue
-  - Wed
-  - Thu
-  - Fri
-  - Sat
-long_weekdays:  # order MUST be Sun-Sat; do not change order
-  - Sunday
-  - Monday
-  - Tuesday
-  - Wednesday
-  - Thursday
-  - Friday
-  - Saturday
-short_months:
-  - Jan
-  - Feb
-  - Mar
-  - Apr
-  - May
-  - Jun
-  - Jul
-  - Aug
-  - Sep
-  - Oct
-  - Nov
-  - Dec
-long_months:
-  - January
-  - February
-  - March
-  - April
-  - May
-  - June
-  - July
-  - August
-  - September
-  - October
-  - November
-  - December
 weekday_modes:  # modes for the Weekday condition type, MUST be listed in order shown
   - Every
   - First
@@ -258,6 +217,8 @@ strings:
     Deleting an entity removes it from Reactor but does not remove it from the hub/source.
     If the source object still exists, the entity will be recreated next time the source is inventoried.
   '#entity-missing-alert': 'The entity is marked missing from the hub'
+  '#action-form-warning': >
+    Note: variable/expression substition is not performed in values entered in this dialog.
 
   # Scope page
   '(choose attribute)': '(choose attribute)'
@@ -327,6 +288,8 @@ strings:
   '#cond-op-notin': 'not in'  # condition op
   '#cond-op-istrue': 'is TRUE'  # condition op
   '#cond-op-isfalse': 'is FALSE'  # condition op
+  '#cond-op-nottrue': 'is NOT TRUE'  # condition op
+  '#cond-op-notfalse': 'is NOT FALSE'  # condition op
   '#cond-op-isnull': 'is NULL'  # condition op
   '#cond-op-isval': 'is not NULL'  # condition op
   '#cond-op-change': 'changes'  # condition op
@@ -484,7 +447,7 @@ strings:
   '#cond-group-or-tip': 'OR means group is true if any child condition/subgroup is true'  # tooltip
   '#cond-group-xor-tip': 'XOR (exclusive or) means group is true if one and only one condition/subgroup is true'  # tooltip
   '#cond-group-nul-tip': 'NUL means group does not affect logic state of parent group'  # tooltip
-  '#cond-group-disable-tip': "Disabled groups are ignored, as if they did not exist (conditions don't run)"  # tooltip
+  '#cond-group-disable-tip': "Disabled condition groups are ignored, as if they did not exist (their conditions aren't evaluated)"  # tooltip
   'Edit group name': 'Edit group name'  # tooltip
   'Export to Rule': 'Export to Rule'  # tooltip
   '#cond-button-addcond': 'Add Condition'
@@ -560,6 +523,7 @@ strings:
   'Capture output (stdout) to:': 'Capture output (stdout) to:'  # field label, Shell Command action
   '(ignore/discard output)': '(ignore/discard output)'  # menu option default
   'Ignore shell/command exit code': 'Ignore shell/command exit code'  # checkbox label, Shell Command action
+  '#opt-current-reaction': '(this reaction)'  # Menu option - current executing reaction
   # Rename Reaction modal dialog
   '#reaction-rename-title': 'Rename Reaction'
   '#reaction-rename-button-rename': 'Rename'
@@ -619,6 +583,7 @@ strings:
   '#action-desc-run-continue': ' (do not wait for it to finish)'
   '#action-desc-stop-global': 'Stop global reaction {0} ({1})'  # reaction name, id
   '#action-desc-stop-rule': 'Stop rule {0} ({1}) {2:"Set"?t}{2:"Reset"?f} reaction'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-stop-current': 'Stop this reaction'  # Stop current reaction
   '#action-desc-notify': 'Notify via {0}: {1}'  # method, parameters
   '#action-desc-request': 'Request HTTP {0} {1:q}{2:"; wait for completion"?#t}'  # method, URL, true=wait
   '#action-desc-shell': 'Shell command: {0:q}{1:" (ignore exit code)"?t}'  # command, true=ignore exit code
@@ -722,29 +687,11 @@ strings:
     The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation
   "Rule {0:q} failed evaluation due to an error. Please see the log file.": >
     Rule {0:q} failed evaluation due to an error. Please see the log file.
-  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found": >
-    An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found
-  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
-    An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}
-  'An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.': >
-    An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.
-  'An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.': >
-    An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.
-  'An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.': >
-    An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.
-  "The global expression {0:q} ({1}) could not be evaluated": >  # 0=name 1=expression
-    The global expression {0:q} ({1}) could not be evaluated
-  'An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.': >
-    An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.
   'A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.': >
     A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.
-  'Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.': >
-    Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.
-  'Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type': >
-    Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type
   "Invalid/unsupported condition type {0:q} in {1:q}": "Invalid/unsupported condition type {0:q} in {1:q}"  # 0=cond type, 1=cond ID
-  'Rule {0:q} could not start because of an error; please refer to the log file.': >
-    Rule {0:q} could not start because of an error; please refer to the log file.
+  "The global expression {0:q} ({1}) could not be evaluated": >  # 0=name 1=expression
+    The global expression {0:q} ({1}) could not be evaluated
   "Rule {0:q} does not exist": "Rule {0:q} does not exist"  # 0=ruleID
   "Global expression {0:q} not defined": "Global expression {0:q} not defined"  # 0=var name
   "Global expression {0:q} is expression-driven and cannot be set": >  # 0=var name
@@ -760,6 +707,22 @@ strings:
     minute. Check for a "flapping" device or a loop in your logic.
   'An Entity Attribute condition in {0:q} ({1}) failed because the referenced entity {2:q} could not be found': >
     An Entity Attribute condition in {0:q} ({1}) failed because the referenced entity {2:q} could not be found
+  "An Entity Attribute condition in rule {0:q} ({1}) failed because the referenced entity {2} ({3}) does not have attribute {4}": >
+    An Entity Attribute condition in rule {0:q} ({1}) failed because the referenced entity {2} ({3}) does not have attribute {4}
+  'An "Expression Value" condition in rule {0:q} ({1}) references an expression {2:q} of rule {3:q} ({4}) that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} ({1}) references an expression {2:q} of rule {3:q} ({4}) that no longer exists.
+  'An "Expression Value" condition in rule {0:q} ({1}) references a local expression {2:q} that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} ({1}) references a local expression {2:q} that no longer exists.
+  'An Expression Value condition in rule {0:q} ({1}) references rule {2:q}, which no longer exists.': >
+    An Expression Value condition in rule {0:q} ({1}) references rule {2:q}, which no longer exists.
+  'An "Expression Value" condition in rule {0:q} ({1}) references global expression {2:q}, which no longer exists.': >
+    An "Expression Value" condition in rule {0:q} ({1}) references global expression {2:q}, which no longer exists.
+  'Rule {0:q} ({1}) failed because an Interval condition references a dependent condition that no longer exists.': >
+    Rule {0:q} ({1}) failed because an Interval condition references a dependent condition that no longer exists.
+  'Rule {0:q} ({1}) failed because it contains a condition of type {2:q}, which is not a recognized condition type': >
+    Rule {0:q} ({1}) failed because it contains a condition of type {2:q}, which is not a recognized condition type
+  'Rule {0:q} ({1}) could not start because of an error; please refer to the log file.': >
+    Rule {0:q} ({1}) could not start because of an error; please refer to the log file.
 
   # General use strings
   'Reactor': 'Reactor'
@@ -824,3 +787,21 @@ strings:
 
   # Retired strings; keep for compatibility with older versions of Reactor
   '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule [RETIRED]
+  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found": >
+    An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found
+  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
+    An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}
+  'An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.
+  'An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.
+  'An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.': >
+    An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.
+  'An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.': >
+    An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.
+  'Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.': >
+    Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.
+  'Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type': >
+    Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type
+  'Rule {0:q} could not start because of an error; please refer to the log file.': >
+    Rule {0:q} could not start because of an error; please refer to the log file.
