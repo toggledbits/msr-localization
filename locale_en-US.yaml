@@ -4,7 +4,7 @@
 # This file is NOT included under the Reactor EULA, and is licensed separately
 # under the MIT License:
 #
-# (C) 2021-2023 Patrick Rigney (US English reference file)
+# (C) 2021-2024 Patrick Rigney (US English reference file)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this file (the "Software"), to deal in the Software without restriction,
@@ -24,18 +24,19 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 23196  # Translators: update to YYDDD (Julian day) as you go.
+version: 24061  # Translators: update to YYDDD (Julian day) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
 maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
+source: "https://github.com/toggledbits/msr-localization"
 
 # Translators: update ref_version to reflect the version of the US English file used to
 #              produce your translation. This will help you track changes needed to future
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 23196
+ref_version: 24061
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -160,6 +161,10 @@ strings:
   '#rule-control-copy': 'Copy/Move Rule'  # tooltip
   '#rule-control-sort': 'Sort (click and drag)'  # tooltip
   '#rule-control-delete': 'Delete Rule'  # tooltip
+  '#rule-override-auto': 'Auto'  # tooltip - Rule state override
+  '#rule-override-set': 'Override: SET'  # tooltip - Rule state override
+  '#rule-override-reset': 'Override: RESET'  # tooltip - Rule state override
+  '#rule-override-attn-text': 'OVERRIDE STATE'  # displayed on override before state
   'This rule set is empty. Click "Add Rule" to add a rule to it.': 'This rule set is empty. Click "Add Rule" to add a rule to it.'
   # Rule status detail card
   '#group-status-no-data': '(no data)'
@@ -723,6 +728,11 @@ strings:
     Rule {0:q} ({1}) failed because it contains a condition of type {2:q}, which is not a recognized condition type
   'Rule {0:q} ({1}) could not start because of an error; please refer to the log file.': >
     Rule {0:q} ({1}) could not start because of an error; please refer to the log file.
+  'Rule data integrity check has found and corrected errors. Reactor needs to be restarted. See the log for details.': >
+    Rule data integrity check has found and corrected errors. Reactor needs to be restarted. See the log for details.
+  'The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log.': >
+    The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log.
+
 
   # General use strings
   'Reactor': 'Reactor'

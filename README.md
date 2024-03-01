@@ -12,6 +12,6 @@ The following localizations are included in the Reactor distribution (either aut
 
 The following localizations are available from third parties:
 
-* TBD
+* sv-SE &mdash; Swedish translation by [@crille](https://smarthome.community/user/crille) at [calmen77/MSR-locale_sv-SE](https://github.com/calmen77/MSR-locale_sv-SE)
 
-<small>Updated: 2021-Oct-10</small>
+<small>Updated: 2024-Mar-01</small>

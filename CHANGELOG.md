@@ -4,6 +4,19 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24061 (for Reactor build >= 24061)
+
+New Strings:
+
+    '#rule-override-auto'
+    '#rule-override-set'
+    '#rule-override-reset'
+    '#rule-override-attn-text'
+    "Rule data integrity check has found and corrected errors. Reactor needs to be restarted. See the log for details."
+    "The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log."
+
+No modified or retired strings in this version.
+
 ## 23196
 
 * The "Number formatting" strings `decimal_sep` and `thousands_sep` are deprecated and will be removed from a future file. Localization of numbers is handled by Node/JS-native localization data (always has been).
