@@ -24,19 +24,18 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24061  # Translators: update to YYDDD (Julian day) as you go.
+version: 24088  # Translators: update to YYDDD (Julian day) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
 maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
-source: "https://github.com/toggledbits/msr-localization"
 
 # Translators: update ref_version to reflect the version of the US English file used to
 #              produce your translation. This will help you track changes needed to future
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 24061
+ref_version: 24088
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -46,10 +45,6 @@ attribution: >
 
 # Your github user ID and repository name for this translation
 #github_repository: toggledbits/msr-localization
-
-# Number formatting (these are not currently used)
-decimal_sep: .
-thousands_sep: ','
 
 # Date formatting extras. The weekday and month names are derived from the JavaScript locale, so
 # they do not need to be defined here.
@@ -161,6 +156,7 @@ strings:
   '#rule-control-copy': 'Copy/Move Rule'  # tooltip
   '#rule-control-sort': 'Sort (click and drag)'  # tooltip
   '#rule-control-delete': 'Delete Rule'  # tooltip
+  '#rule-control-tools': 'Tools'  # tooltip
   '#rule-override-auto': 'Auto'  # tooltip - Rule state override
   '#rule-override-set': 'Override: SET'  # tooltip - Rule state override
   '#rule-override-reset': 'Override: RESET'  # tooltip - Rule state override
@@ -218,6 +214,7 @@ strings:
   '#entity-delete-title': 'Delete Entity'  # dialog title
   '#entity-delete-button-cancel': 'Cancel'  # button label
   '#entity-delete-button-delete': 'Delete'  # button label
+  '#entity-copyattr-button-copy': 'Copy Attributes'  # button label
   '#entity-delete-body': >
     Deleting an entity removes it from Reactor but does not remove it from the hub/source.
     If the source object still exists, the entity will be recreated next time the source is inventoried.

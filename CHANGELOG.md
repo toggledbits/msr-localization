@@ -4,6 +4,15 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24088
+
+New Strings:
+
+    '#rule-control-tools'
+    '#entity-copyattr-button-copy'
+
+The keys `decimal_sep` and `thousands_sep` have now been removed. They are handled by *nodejs* native localization features.
+
 ## 24061 (for Reactor build >= 24061)
 
 New Strings:
