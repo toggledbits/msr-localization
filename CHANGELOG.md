@@ -4,6 +4,12 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24095
+
+New Strings:
+
+    'Notify Action in {0}: {1}'
+
 ## 24088
 
 New Strings:

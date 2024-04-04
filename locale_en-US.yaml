@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24088  # Translators: update to YYDDD (Julian day) as you go.
+version: 24095  # Translators: update to YYDDD (Julian day) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 24088
+ref_version: 24095
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -729,7 +729,7 @@ strings:
     Rule data integrity check has found and corrected errors. Reactor needs to be restarted. See the log for details.
   'The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log.': >
     The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log.
-
+  'Notify Action in {0}: {1}': 'Notify Action in {0}: {1}'  # Alert Notifier
 
   # General use strings
   'Reactor': 'Reactor'
