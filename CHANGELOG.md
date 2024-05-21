@@ -4,6 +4,23 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24141
+
+This version principally supports the upcoming user access control (login) feature.
+
+New Strings:
+
+    '#nav_logout': Log Out
+    '#login-username-prompt': Username
+    '#login-password-prompt': Password
+    '#login-user-pass-reqd': "Username and password are required."
+    '#login-please-wait': "Please wait..."
+    '#login-not-permitted': "You do not have permission for this resource."
+    '#login-auth-fail': "Your username and/or password are incorrect."
+    '#login-general-error': "Something went wrong. Try again."
+    '#login-goodbye': "You have been logged out."
+    '#login-remember-me': "Remember me"
+
 ## 24095
 
 New Strings:
