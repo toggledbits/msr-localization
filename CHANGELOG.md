@@ -4,6 +4,12 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24153
+
+New Strings:
+
+    '#login-button-text': "Log In"
+
 ## 24141
 
 This version principally supports the upcoming user access control (login) feature.
