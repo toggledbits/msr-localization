@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24153  # Translators: update to YYDDD (Julian day) as you go.
+version: 24184  # Translators: update to YYDDD (Julian day) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 24153
+ref_version: 24184
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -166,6 +166,8 @@ strings:
   # Rule status detail card
   '#group-status-no-data': '(no data)'
   'Rule ID: {0}': 'Rule ID: {0}'  # 0=rule ID
+  '#pop-condval-current': "Current Value: {0}<br>at {1}"  # HTML, condition value popover
+  '#pop-condval-previous': "Previous Value: {0}<br>at {1}"  # HTML, condition value popover
 
   # Reactions page
   '#reactions-page-title': 'Global Reactions'

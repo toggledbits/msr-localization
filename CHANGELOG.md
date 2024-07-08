@@ -4,6 +4,13 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24184
+
+New Strings:
+
+    '#pop-condval-current': "Current Value: {0}<br>at {1}"  # HTML, condition value popover
+    '#pop-condval-previous': "Previous Value: {0}<br>at {1}"  # HTML, condition value popover
+
 ## 24153
 
 New Strings:
