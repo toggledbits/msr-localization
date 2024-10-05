@@ -4,6 +4,27 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24273
+
+New Strings:
+    '#statuswidgets-hrsago': '{0:d} hr{0:"s"?!=1} ago'
+    '#entity-setattr-title': 'Set Writable Attribute'
+    '#entity-setattr-selectattr-label': 'Attribute:'
+    '#entity-setattr-newattrval-label': 'New Value:'
+    '#entity-setattr-button-set': 'Set Attribute'
+    '#entity-setattr-button-cancel': 'Cancel'
+    '#reaction-script': 'Script Action'
+    'Script/expression required.'
+    '#validation-not-integer': 'The supplied value is not a valid integer.'
+    '#validation-int-minimum': 'The supplied value must be an integer >= {0:d}'
+    '#validation-int-maximum': 'The supplied value must be an integer <= {0:d}'
+    '#validation-not-real': 'The supplied value is not a real number.'
+    '#validation-real-minimum': 'The supplied value must be a real number >= {0:f}'
+    '#validation-real-maximum': 'The supplied value must be a real number <= {0:f}'
+
+Changed Strings:
+    The string "Ignore self-signed/invalid SSL certificates" changed to "Ignore self-signed/invalid server certificates" because SSL has evolved into TLS.
+
 ## 24184
 
 New Strings:

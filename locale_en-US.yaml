@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24184  # Translators: update to YYDDD (Julian day) as you go.
+version: 24273  # Translators: update to YYDDD (Julian day) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 24184
+ref_version: 24273
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -120,6 +120,7 @@ strings:
   'Choose Widget:': 'Choose Widget:'  # selector label
   'Controller ID: {0}': 'Controller ID: {0}'  # tooltip for controller status entry
   'Stop this reaction/task': 'Stop this reaction/task'  # tooltip for Running Reactions stop button
+  '#statuswidgets-hrsago': '{0:d} hr{0:"s"?!=1} ago'  # 1 hr ago ...or... 2 hrs ago
 
   # Rule Sets page
   'Add a new rule set': 'Add a new rule set'  # tooltip
@@ -224,6 +225,11 @@ strings:
   '#entity-missing-alert': 'The entity is marked missing from the hub'
   '#action-form-warning': >
     Note: variable/expression substition is not performed in values entered in this dialog.
+  '#entity-setattr-title': 'Set Writable Attribute'
+  '#entity-setattr-selectattr-label': 'Attribute:'
+  '#entity-setattr-newattrval-label': 'New Value:'
+  '#entity-setattr-button-set': 'Set Attribute'
+  '#entity-setattr-button-cancel': 'Cancel'
 
   # Scope page
   '(choose attribute)': '(choose attribute)'
@@ -464,7 +470,8 @@ strings:
   '#cond-group-or-tip': 'OR means group is true if any child condition/subgroup is true'  # tooltip
   '#cond-group-xor-tip': 'XOR (exclusive or) means group is true if one and only one condition/subgroup is true'  # tooltip
   '#cond-group-nul-tip': 'NUL means group does not affect logic state of parent group'  # tooltip
-  '#cond-group-disable-tip': "Disabled condition groups are ignored, as if they did not exist (their conditions aren't evaluated)"  # tooltip
+  '#cond-group-disable-tip': >   # tooltip
+    Disabled condition groups are ignored, as if they did not exist (their conditions aren't evaluated)
   'Edit group name': 'Edit group name'  # tooltip
   'Export to Rule': 'Export to Rule'  # tooltip
   '#cond-button-addcond': 'Add Condition'
@@ -491,6 +498,7 @@ strings:
   # Reaction Editor
   '#reaction-comment': 'Comment'
   '#reaction-entity': 'Entity Action'
+  '#reaction-script': 'Script Action'
   '#reaction-delay': 'Delay'
   '#reaction-run': 'Run Reaction'
   '#reaction-stop': 'Stop Reaction'
@@ -524,7 +532,7 @@ strings:
   "Message:": "Message:"  # field label, notify action
   "Request URL:": "Request URL:"  # field label, HTTP Request action
   "Ignore self-signed/invalid SSL certificates": >  # checkbox label, HTTP Request action
-    Ignore self-signed/invalid SSL certificates
+    Ignore self-signed/invalid server certificates
   'Request Headers:': 'Request Headers:'  # field label, HTTP Request action
   'Request Body:': 'Request Body:'  # field label, HTTP Request action
   'HTTP Auth Type:': 'HTTP Auth Type:'  # field label, HTTP Request Action
@@ -568,6 +576,7 @@ strings:
   'Must be integer > 0, or MM:SS or HH:MM:SS': 'Must be integer > 0, or MM:SS or HH:MM:SS'
   'Entity required': 'Entity required'
   'Selection required.': 'Selection required.'
+  'Script/expression required.': 'Script/expression required.'
   'Must be http:// or https:// or substitution': 'Must be http:// or https:// or substitution'
   'Invalid format': 'Invalid format'
   "Command contains illegal characters (line breaks)": "Command contains illegal characters (line breaks)"
@@ -806,6 +815,12 @@ strings:
   'Content hidden': 'Content hidden'  # tooltip for non-empty collapsed editors
   '#reactor-update-available': 'A new version of Reactor is available ({0}-{1}). {2}'  # branch, version, message
   '#reactor-update-message': 'Please upgrade to get the latest bug fixes and features.'
+  '#validation-not-integer': 'The supplied value is not a valid integer.'
+  '#validation-int-minimum': 'The supplied value must be an integer >= {0:d}'
+  '#validation-int-maximum': 'The supplied value must be an integer <= {0:d}'
+  '#validation-not-real': 'The supplied value is not a real number.'
+  '#validation-real-minimum': 'The supplied value must be a real number >= {0:f}'
+  '#validation-real-maximum': 'The supplied value must be a real number <= {0:f}'
 
   # Retired strings; keep for compatibility with older versions of Reactor
   '; save response to {0:q} ({1})': '; save response to {0:q} ({1})'  # 0=varname, 1=rule [RETIRED]
