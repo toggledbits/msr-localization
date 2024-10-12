@@ -7,6 +7,7 @@ For "New Strings", please refer to the reference file for comments/specifics/rec
 ## 24273
 
 New Strings:
+
     '#statuswidgets-hrsago': '{0:d} hr{0:"s"?!=1} ago'
     '#entity-setattr-title': 'Set Writable Attribute'
     '#entity-setattr-selectattr-label': 'Attribute:'
@@ -23,6 +24,7 @@ New Strings:
     '#validation-real-maximum': 'The supplied value must be a real number <= {0:f}'
 
 Changed Strings:
+
     The string "Ignore self-signed/invalid SSL certificates" changed to "Ignore self-signed/invalid server certificates" because SSL has evolved into TLS.
 
 ## 24184
