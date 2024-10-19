@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24273  # Translators: update to YYDDD (Julian day) as you go.
+version: 24293  # Translators: update to YYDDD (Julian day) as you go.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 24273
+ref_version: 24293
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -86,6 +86,8 @@ strings:
     This may be due to incorrect system configuration on either or both. Please
     check the configuration of both systems. The host reports {0}; browser
     reports {1}; difference {2:.3f} seconds.
+  "#ui-theme-switch-to-dark": "Switch to dark theme"
+  "#ui-theme-switch-to-light": "Switch to light theme"
 
   # Status page
   '#reaction-status-ended': 'ended'

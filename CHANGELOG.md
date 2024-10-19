@@ -4,7 +4,7 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
-## 24273
+## 24293
 
 New Strings:
 
@@ -22,6 +22,9 @@ New Strings:
     '#validation-not-real': 'The supplied value is not a real number.'
     '#validation-real-minimum': 'The supplied value must be a real number >= {0:f}'
     '#validation-real-maximum': 'The supplied value must be a real number <= {0:f}'
+    "#ui-theme-switch-to-dark": "Switch to dark theme"
+    "#ui-theme-switch-to-light": "Switch to light theme"
+
 
 Changed Strings:
 
