@@ -4,6 +4,12 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 24337
+
+* The text of `#status-widget-info-text` has been modified to clarify that widgets are to be dropped on the top navigation bar to remove them.
+* The `The rule set is empty. Click "Add Rule" to add a rule to it.` text has been modified with the correct name of the button: `... "Create Rule" ...`.
+* The redundant string `(unspecified)` is now no longer used. The existing similar string `(not specified)` is the preferred string.
+
 ## 24293
 
 New Strings:
