@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24337  # Translators: update to YYDDD (Julian day) as you go.
+version: 25141  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 24337
+ref_version: 25141
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -88,6 +88,8 @@ strings:
     reports {1}; difference {2:.3f} seconds.
   "#ui-theme-switch-to-dark": "Switch to dark theme"
   "#ui-theme-switch-to-light": "Switch to light theme"
+  "#ui-tab-not-loaded": "Tab Not Loaded"
+  "#ui-tab-not-loaded-text": "The requested tab could not be loaded. Please reload the UI and try again."
 
   # Status page
   '#reaction-status-ended': 'ended'
@@ -541,6 +543,7 @@ strings:
   'Username:': 'Username:'  # field label, HTTP Request Action
   'Password:': 'Password:'  # field label, HTTP Request Action
   'Capture response to:': 'Capture response to:'  # field label, HTTP Request action
+  'Store captured response in advanced form': 'Store captured response in advanced form'  # field label, HTTP Request action
   '(ignore/discard response)': '(ignore/discard response)'  # menu option default, HTTP Request action
   'Wait until request completes': 'Wait until request completes'  # checkbox label, HTTP Request action
   'Suppress alerts on HTTP errors': 'Suppress alerts on HTTP errors'  # checkbox label, HTTP Request action

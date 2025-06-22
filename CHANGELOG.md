@@ -4,6 +4,14 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 25141
+
+New strings:
+	
+	'#ui-tab-not-loaded': 'Tab Not Loaded'
+	'#ui-tab-not-loaded-text': 'The requested tab could not be loaded. Please reload the UI and try again.'
+	'Store captured response in advanced form'  # HTTP Request action option
+
 ## 24337
 
 * The text of `#status-widget-info-text` has been modified to clarify that widgets are to be dropped on the top navigation bar to remove them.
