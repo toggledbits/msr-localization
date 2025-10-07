@@ -4,13 +4,20 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 25261
+
+New strings:
+
+    'Search for rule'
+    'A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})'
+
 ## 25141
 
 New strings:
-	
-	'#ui-tab-not-loaded': 'Tab Not Loaded'
-	'#ui-tab-not-loaded-text': 'The requested tab could not be loaded. Please reload the UI and try again.'
-	'Store captured response in advanced form'  # HTTP Request action option
+
+    '#ui-tab-not-loaded': 'Tab Not Loaded'
+    '#ui-tab-not-loaded-text': 'The requested tab could not be loaded. Please reload the UI and try again.'
+    'Store captured response in advanced form'  # HTTP Request action option
 
 ## 24337
 

@@ -4,7 +4,7 @@
 # This file is NOT included under the Reactor EULA, and is licensed separately
 # under the MIT License:
 #
-# (C) 2021-2024 Patrick Rigney (US English reference file)
+# (C) 2021-2025 Patrick Rigney (US English reference file)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this file (the "Software"), to deal in the Software without restriction,
@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 25141  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
+version: 25261  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 25141
+ref_version: 25261
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -127,6 +127,7 @@ strings:
   '#statuswidgets-hrsago': '{0:d} hr{0:"s"?!=1} ago'  # 1 hr ago ...or... 2 hrs ago
 
   # Rule Sets page
+  'Search for rule': 'Search for rule'  # placeholder in search field of offcanvas
   'Add a new rule set': 'Add a new rule set'  # tooltip
   '#ruleset-control-rename': 'Click to rename this rule set'  # tooltip (hover over Rule Set name)
   '#ruleset-control-alphasort': 'Sort rules alphabetically'  # tooltip
@@ -715,6 +716,8 @@ strings:
     The expression {0:q} in variable {1:q} of rule {2:q} ({3}) could not be evaluated
   "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation": >
     The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation
+  "A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})": >
+    A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})
   "Rule {0:q} failed evaluation due to an error. Please see the log file.": >
     Rule {0:q} failed evaluation due to an error. Please see the log file.
   'A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.': >
