@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 25261  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
+version: 25285  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 25261
+ref_version: 25285
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -822,6 +822,9 @@ strings:
   'Content hidden': 'Content hidden'  # tooltip for non-empty collapsed editors
   '#reactor-update-available': 'A new version of Reactor is available ({0}-{1}). {2}'  # branch, version, message
   '#reactor-update-message': 'Please upgrade to get the latest bug fixes and features.'
+  '#reactor-updated': >
+    Reactor has been upgraded. Please refer to the release notes at the link below for additional information.
+  '#reactor-release-notes': 'Release Notes'  # link title for post-upgrade alert
   '#validation-not-integer': 'The supplied value is not a valid integer.'
   '#validation-int-minimum': 'The supplied value must be an integer >= {0:d}'
   '#validation-int-maximum': 'The supplied value must be an integer <= {0:d}'

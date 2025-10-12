@@ -4,20 +4,27 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 25285
+
+New strings:
+
+* '#reactor-updated': 'Reactor has been upgraded. Please refer to the release notes at the link below for additional information.'
+* '#reactor-release-notes': 'Release Notes'  # release notes link title
+
 ## 25261
 
 New strings:
 
-    'Search for rule'
-    'A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})'
+* 'Search for rule'
+* 'A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})'
 
 ## 25141
 
 New strings:
 
-    '#ui-tab-not-loaded': 'Tab Not Loaded'
-    '#ui-tab-not-loaded-text': 'The requested tab could not be loaded. Please reload the UI and try again.'
-    'Store captured response in advanced form'  # HTTP Request action option
+* '#ui-tab-not-loaded': 'Tab Not Loaded'
+* '#ui-tab-not-loaded-text': 'The requested tab could not be loaded. Please reload the UI and try again.'
+* 'Store captured response in advanced form'  # HTTP Request action option
 
 ## 24337
 
