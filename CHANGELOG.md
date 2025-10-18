@@ -4,10 +4,11 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
-## 25285
+## 25291
 
 New strings:
 
+* '#global-expr-cycle': 'A cycle was detected in global expressions at {0:q}.'
 * '#reactor-updated': 'Reactor has been upgraded. Please refer to the release notes at the link below for additional information.'
 * '#reactor-release-notes': 'Release Notes'  # release notes link title
 

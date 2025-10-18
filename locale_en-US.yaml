@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 25285  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
+version: 25291  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 25285
+ref_version: 25291
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -718,6 +718,8 @@ strings:
     The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation
   "A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})": >
     A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})
+  "#global-expr-cycle":
+    A cycle was detected in global expressions at {0:q}.
   "Rule {0:q} failed evaluation due to an error. Please see the log file.": >
     Rule {0:q} failed evaluation due to an error. Please see the log file.
   'A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.': >
