@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 25291  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
+version: 26012  # Translators: update as YYDDD (DDD=day of year 001-366) as you go. This is YOUR version number.
 locale: en-US
 description: US English
 author: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/toggledbits"
@@ -35,7 +35,7 @@ maintainer: "Patrick H. Rigney (toggledbits), https://smarthome.community/user/t
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the
 #              Reactor install "tools" subdirectory to help you identify differences.
-ref_version: 25291
+ref_version: 26012
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -74,6 +74,7 @@ strings:
   '#nav_dashboard': Dashboard
   '#nav_docs': Manual
   '#nav_bugs': Bug Tracker
+  '#nav_community': Community
   '#nav_donate': Donate
   '#nav_about': About
   '#nav_logout': Log Out
@@ -195,6 +196,7 @@ strings:
   'Global Expressions': 'Global Expressions'
   'Save Changes': 'Save Changes'  # button label
   'Revert': 'Revert'  # button label
+  '(value cannot be represented as JSON)': '(value cannot be represented as JSON)'  # message for "Last value"
 
   # Entities page
   'Click for predefined values': 'Click for predefined values'
@@ -302,6 +304,7 @@ strings:
   '#cond-sun': 'Sunrise/Sunset'  # condition type
   '#cond-interval': 'Interval'  # condition type
   '#cond-startup': 'System Startup'  # condition type
+  '#cond-script': 'Script'  # condition type
   '#cond-op-bet': 'between'  # condition op
   '#cond-op-nob': 'not between'  # condition op
   '#cond-op-before': 'before'  # condition op
@@ -575,6 +578,8 @@ strings:
     I will try to preserve this action, but you can't edit it.
   # Other strings
   'Enter comment text': 'Enter comment text'  # default text for comment
+  'Enter script/expression': 'Enter script/expression'
+  'YAML or JSON': 'YAML or JSON'
   'Change Reaction Name': 'Change Reaction Name'  # tooltip
   'Run Reaction Now': 'Run Reaction Now'
   '{0} - Set': '{0} - Set'  # Rule's set reaction: rule name or ID
@@ -763,6 +768,10 @@ strings:
   'The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log.': >
     The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log.
   'Notify Action in {0}: {1}': 'Notify Action in {0}: {1}'  # Alert Notifier
+  'While {0}': 'While {0}'  # Reaction detail card, 0 = abbreviated conditions for loop
+  '(conditions)': '(conditions)'  # default display for While conditions
+  'Maximum iterations:': 'Maximum iterations:'  # while action iteration limit (hint below)
+  'Integer > 0, or 0/blank for no limit (default)': 'Integer > 0, or 0/blank for no limit (default)'  # field hint
 
   # General use strings
   'Reactor': 'Reactor'

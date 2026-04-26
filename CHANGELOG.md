@@ -4,6 +4,20 @@
 
 For "New Strings", please refer to the reference file for comments/specifics/recommendations regarding usage.
 
+## 26012
+
+New strings:
+
+* '#nav_community': Community
+* '(value cannot be represented as JSON)  # message for "Last value"
+* '#cond-script': 'Script'  # condition type
+* 'Enter script/expression'  # placeholder
+* 'YAML or JSON'  # placeholder
+* 'While {0}'  # Reaction detail card, 0 = abbreviated conditions for loop
+* '(conditions)'  # default display for While actions
+* 'Maximum iterations:'  # while action iteration limit (hint below)
+* 'Integer > 0, or 0/blank for no limit (default)'  # field hint
+
 ## 25291
 
 New strings:
